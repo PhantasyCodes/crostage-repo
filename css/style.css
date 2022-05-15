@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  --card-width: 200px;
+  --card-height: 300px;
+  --card-transition-duration: 800ms;
+  --card-transition-easing: ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Cormorant;
+}
+
+h2 {
+    font-family: Josefin Sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    background-color: #EDC7B7;
+    overflow-x: hidden;
+}
+
+.loader {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #EEE2DC;
+    z-index: 50;
+    opacity: 1;
+}
+
+.navbar {
+    border-bottom: solid 1px black;
+    height: 8vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #EDC7B7;
+    z-index: 2;
+}
+
+.container {
+    padding-top: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper img {
+    max-width: 200px;
+}
+
+.search-bar {
+    margin-left: 20px;
+    width: 13vw;
+    border-bottom: solid 2px rgb(0, 0, 0);
+}
+
+.search-bar input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    outline: none;
+    text-align: left;
+    color: #000000;
+    font-family: Josefin sans;
+    font-size: 1rem;
+    padding: 0;
+    margin-right: 50px;
+}
+
+.search-bar input::placeholder {
+    color: #000000;
+}
+
+.search-bar i {
+    cursor: pointer;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Josefin Sans;
+    font-size: 1.5rem; 
+    padding: 0 20px;
+}
+
+.nav-links a i {
+    margin-right: 20px;
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-left {
+    width: 50vw;
+    padding-top: 250px;
+    padding-left: 150px;
+}
+
+.hero-left h1 {
+    font-size: 96px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.hero-left h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+#btn1 {
+    padding: 20px 20px;
+    font-size: 1.8rem;
+    font-family: Josefin Sans;
+    color: rgb(255, 255, 255);
+    background-color: #AC3B61;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition-duration: 0.4s;
+}
+
+#btn1:hover {
+    background-color: #ac3b6196;
+    padding-right: 100px;
+}
+
+#btn1 .fa {
+    position: absolute;
+    margin-left: 230px;
+    color: white;
+    transform: translateX(-90%);
+    opacity: 0;
+    transition-duration: 0.4s;
+}
+
+#btn1:hover .fa {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.hero-right {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+
+.carousel-wrapper {
+    margin-top: 300px;
+    margin-right: 800px;
+}
+
+.cardList {
+    position: absolute;
+    width: calc(3 * var(--card-width));
+    height: auto;
+}
+
+.cardList__btn {
+    --btn-size: 35px;
+    width: var(--btn-size);
+    height: var(--btn-size);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.cardList__btn.btn--left {
+    left: -5%;
+}
+
+.cardList__btn.btn--right {
+    right: -5%;
+}
+
+.cardList__btn .icon {
+    width: 100%;
+    height: 100%;
+}
+
+.cardList__btn .icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cardList .cards__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.card {
+    /* --card-translateY-offset: 100vh; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+    display: inline-block;
+    width: var(--card-width);
+    height: var(--card-height);
+    transition: transform var(--card-transition-duration) var(--card-transition-easing);
+    user-select: none;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    transition: opacity var(--card-transition-duration) var(--card-transition-easing);
+    opacity: calc(1 - var(--opacity));
+}
+
+.card__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card__image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.current--card {
+    --current-card-rotation-offset: 0;
+    --card-translateX-offset: 0;
+    --card-rotation-offset: var(--current-card-rotation-offset);
+    --card-scale-offset: 1.2;
+    --opacity: 0.8;
+}
+
+.card.previous--card {
+    --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+    --card-rotation-offset: 25deg;
+}
+
+.card.next--card {
+    --card-translateX-offset: calc(var(--card-width) * 1.1);
+    --card-rotation-offset: -25deg;
+}
+
+.card.previous--card, .card.next--card {
+    --card-scale-offset: 0.9;
+    --opacity: 0.4;
+}
+
+.infoList {
+    position: absolute;
+    width: calc(3 * var(--card-width));
+    height: var(--card-height);
+    pointer-events: none;
+}
+
+.infoList .info__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.info {
+    margin-bottom: calc(var(--card-height) / 8);
+    margin-left: calc(var(--card-width) / 1.5);
+    transform: translateZ(2rem);
+    transition: transform var(--card-transition-duration) var(--card-transition-easing);
+}
+
+.info .text {
+    position: relative;
+    font-family: "Josefin Sans";
+    font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
+    font-weight: 400;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    width: fit-content;
+}
+
+.info .name,
+.info .location {
+    text-transform: uppercase;
+}
+
+.info .location {
+    font-weight: 400;
+}
+
+.info .location {
+    --mg-left: 40px;
+    --text-size-offset: 0.12;
+    font-weight: 400;
+    margin-left: var(--mg-left);
+    margin-bottom: calc(var(--mg-left) / 2);
+    padding-bottom: 0.8rem;
+}
+
+.info .location::before, .info .location::after {
+    content: "";
+    position: absolute;
+    background: rgb(0, 0, 0);
+    left: 0%;
+    transform: translate(calc(-1 * var(--mg-left)), -50%);
+}
+
+.info .location::before {
+    top: 50%;
+    width: 20px;
+    height: 5px;
+}
+
+.info .location::after {
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+}
+
+.info .description {
+    --text-size-offset: 0.065;
+    font-weight: 500;
+}
+
+.info.current--info {
+    opacity: 1;
+    display: block;
+}
+
+.info.previous--info, .info.next--info {
+    opacity: 0;
+    display: none;
+} 
+  
+@media only screen and (min-width: 800px) {
+    :root {
+        --card-width: 250px;
+        --card-height: 400px;
+    }
+}
+
+.todays-closet {
+    width: 480px;
+    height: 604px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-2 {
+    height: 100vh;
+}
+
+.carousel-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.carousel-heading h1 {
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.carousel-heading h2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.owl-carousel-wrapper {
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.owl-stage-outer {
+    height: 100vh;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.slider img {
+    max-width: 400px;
+}
+
+.slider-description {
+    width: 40vw;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-description h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.slider-description h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.slider-description h3 {
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+.slider-description p {
+    font-family: Josefin Sans;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.owl-nav {
+    position: absolute;
+    right: 50px;
+    bottom: 300px;
+}
+
+.owl-nav img {
+    padding: 10px 10px;
+    border: solid black 1px;
+    border-radius: 40px;
+    width: 50px;
+    transition-duration: 0.3s;
+}
+
+.owl-nav img:hover {
+    background-color: #AC3B61;
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background: none !important;
+    outline: none !important;
+}
+
+.section-3 {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-3-left {
+    padding-left: 40px;
+}
+
+.section-3-left h1 {
+    font-size: 54px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.section-3-left h2 {
+    font-size: 24px;
+    font-weight: 350;
+    margin-bottom: 50px;
+}
+
+.section-3-right {
+    height: 60vh;
+    width: 50vw;
+    margin-right: 70px;
+    background-color: #C4C4C4;
+}
+
+.shadow-btn {
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-family: Josefin Sans;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    background-color: #AC3B61;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 10px 10px #888888;
+    transition-duration: 0.3s;
+}
+
+.sec-3-btn {
+    margin-left: 200px;
+}
+
+.shadow-btn:hover {
+    background-color: #ac3b6196;
+    box-shadow: 15px 10px #888888;
+}
+
+.section-4 {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.section-4 h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.section-4 h2 {
+    font-weight: 350;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.section-4 img {
+    height: 150px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 0px;
+    border-top: solid 1px black;;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+.col h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.col a {
+    color: #000000;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.col-5 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.col-5 i {
+    padding: 0 10px;
+}
