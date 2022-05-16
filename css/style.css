@@ -7,6 +7,20 @@
   --card-transition-easing: ease;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #AC3B61;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,7 +50,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #EEE2DC;
-    z-index: 50;
+    z-index: 51;
     opacity: 1;
 }
 
