@@ -209,6 +209,7 @@ function init() {
 }
 
 const waitForImages = () => {
+
 	const images = [...document.querySelectorAll("img")];
 	const totalImages = images.length;
 	let loadedImages = 0;
@@ -228,6 +229,7 @@ const waitForImages = () => {
 			if (instance.isComplete) {
 				loadedImages++;
 				let loadProgress = loadedImages / totalImages;
+				console.log(loadProgress)
 
 				gsap.to(loaderEl, {
 					duration: 1,
@@ -238,7 +240,7 @@ const waitForImages = () => {
 				if (totalImages == loadedImages) {
 					gsap.timeline()
 						.to(".loading__wrapper", {
-						duration: 0.8,
+						duration: 0,
 						opacity: 0,
 						pointerEvents: "none",
 					})
