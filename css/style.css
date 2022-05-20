@@ -614,3 +614,69 @@ button:focus {
 .col-5 i {
     padding: 0 10px;
 }
+
+.sign-in-left {
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: solid black 2px;
+}
+
+.sign-in-left h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.sign-in-hero {
+    align-items: center;
+}
+
+.sign-in-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-right h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sign-in-right h3 {
+    font-family: Josefin Sans;
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.forms {
+    margin-bottom: 30px;
+    width: 23vw;
+    border-bottom: solid 2px rgb(0, 0, 0);
+}
+
+.inputs {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    outline: none;
+    text-align: left;
+    color: #000000;
+    font-family: Josefin sans;
+    font-size: 1rem;
+    padding: 0;
+    margin-right: 50px; 
+}
+
+.inputs::placeholder {
+    color: #000000;
+}
+
+.forgot {
+    margin-top: 30px;
+    font-family: Josefin Sans;
+    text-decoration: underline;
+    color: #000000;
+}
