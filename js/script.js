@@ -1,8 +1,8 @@
-// document.body.style.overflowY = 'hidden';
+document.body.style.overflowY = 'hidden';
 
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-//   }
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
 
 var animation = bodymovin.loadAnimation({

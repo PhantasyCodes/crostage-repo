@@ -49,7 +49,7 @@ body {
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background-color: #EEE2DC;
+    background-color: #FAEDCD;
     z-index: 51;
     opacity: 1;
 }
@@ -110,6 +110,25 @@ body {
     padding: 0 20px;
 }
 
+.signin-link {
+    position: relative;
+}
+
+.signin-link::after {
+    content: "";
+    position: absolute;
+    background-color: #BC6C25;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s ease-out;
+}
+
+.signin-link:hover::after {
+    width: 100%;
+}
+
 .nav-links a i {
     margin-right: 20px;
 }
@@ -155,7 +174,7 @@ body {
 }
 
 #btn1:hover {
-    background-color: #ac3b6196;
+    background-color: #DDA15E;
     padding-right: 100px;
 }
 
@@ -491,7 +510,7 @@ button:focus {
 }
 
 .owl-nav img:hover {
-    background-color: #AC3B61;
+    background-color: #BC6C25;
 }
 
 .owl-prev:hover, .owl-next:hover {
@@ -519,7 +538,7 @@ button:focus {
 }
 
 .section-3-left {
-    padding-left: 40px;
+    padding-left: 80px;
 }
 
 .section-3-left h1 {
@@ -540,7 +559,14 @@ button:focus {
     height: 60vh;
     width: 40vw;
     margin-right: 70px;
-    background-color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3-right img {
+    width: 600px;
+    margin-bottom: 90px;
 }
 
 .shadow-btn {
@@ -569,7 +595,7 @@ button:focus {
 
 .sec-3-btn:hover {
     color: #000;
-    background-color: #FEFAE0;
+    background-color: #FAEDCD;
     margin-left: 200px;
 }
 
