@@ -467,6 +467,7 @@ button:focus {
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
 }
 
 .slider-description h2 {
@@ -565,7 +566,7 @@ button:focus {
 }
 
 .section-3-right img {
-    width: 600px;
+    width: 400px;
     margin-bottom: 90px;
 }
 
