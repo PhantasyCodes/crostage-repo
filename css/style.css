@@ -72,9 +72,6 @@ body {
     align-items: center;
 }
 
-.logo-wrapper {
-}
-
 .logo-wrapper a {
     display: flex;
     justify-content: center;
@@ -111,11 +108,20 @@ body {
     cursor: pointer;
 }
 
+.nav-links {
+    max-width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav-links a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-family: Josefin Sans;
-    font-size: 1.5rem; 
+    font-size: 1.5em; 
     padding: 0 20px;
 }
 

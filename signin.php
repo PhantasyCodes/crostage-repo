@@ -18,7 +18,7 @@
               </form>
             </div>
             <div class="logo-wrapper">
-                <a href="index.html"><img class=logo src="images/logo-black.png" alt=""></a>
+                <a href="index.php"><img class=logo src="images/logo-black.png" alt=""></a>
             </div>
             <div class="nav-links">
                 <a href="">SIGN IN</a>
