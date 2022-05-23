@@ -26,7 +26,7 @@
                 <a href=""><img class=logo src="images/logo-black.png" alt=""></a>
             </div>
             <div class="nav-links">
-                <a class="signin-link" href="signin.html">SIGN IN</a>
+                <a class="signin-link" href="signin.php">SIGN IN</a>
                 <a href=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
             </div>
         </div>
