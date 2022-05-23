@@ -56,7 +56,7 @@ body {
 
 .navbar {
     border-bottom: solid 1px black;
-    height: 8vh;
+    min-height: 8vh;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -78,7 +78,7 @@ body {
 
 .search-bar {
     margin-left: 20px;
-    width: 13vw;
+    max-width: 13vw;
     border-bottom: solid 2px rgb(0, 0, 0);
 }
 
