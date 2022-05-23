@@ -40,7 +40,7 @@ body {
 
 .navbar {
     border-bottom: solid 1px black;
-    height: 8vh;
+    min-height: 8vh;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -100,7 +100,7 @@ body {
 
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
 }
