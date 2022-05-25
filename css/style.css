@@ -126,6 +126,7 @@ body {
 }
 
 .signin-link {
+    margin-top: 5px;
     position: relative;
 }
 
@@ -766,7 +767,8 @@ button:focus {
 }
 
 .sign-in-left h2 {
-    font-weight: 400;
+    font-family: Cormorant;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -780,8 +782,9 @@ button:focus {
 }
 
 .sign-in-right h2 {
-    font-weight: 400;
-    font-size: 2rem;
+    font-family: Cormorant;
+    font-weight: 600;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -793,6 +796,11 @@ button:focus {
 }
 
 .forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms input {
     margin-bottom: 30px;
     width: 23vw;
     border-bottom: solid 2px rgb(0, 0, 0);
@@ -819,4 +827,15 @@ button:focus {
     font-family: Josefin Sans;
     text-decoration: underline;
     color: #000000;
+}
+
+.register-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-wrapper {
+    justify-content: center;
+    align-items: center;
 }

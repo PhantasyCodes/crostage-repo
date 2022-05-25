@@ -26,19 +26,18 @@
             </div>
         </div>
     </nav>
-    <div class="hero sign-in-hero">
-        <div class="hero-left sign-in-left">
-            <h2>No Account?</h2>
-            <a href="register.php"><button class="shadow-btn">REGISTER</button></a>
-        </div>
-        <div class="hero-right sign-in-right">
-            <h2>Heey!</h2>
-            <h3>Welcome back! Sign in here:</h3>
+    <div class="hero register-hero">
+        <div class="sign-in-right register-wrapper">
+            <h2>Create an Account</h2>
             <form class="forms" action="/action_page.php">
+                <input class="inputs" type="text" placeholder="First Name" name="">
+                <input class="inputs" type="text" placeholder="Last Name" name="">
+                <input class="inputs" type="text" placeholder="Username" name="">
+                <input class="inputs" type="text" placeholder="Phone No" name="">
                 <input class="inputs" type="text" placeholder="Email Address" name="">
                 <input class="inputs" type="text" placeholder="Password" name="">
             </form>
-            <a href=""><button class="shadow-btn">SIGN IN</button></a>
+            <a href=""><button class="shadow-btn">REGISTER</button></a>
             <a class="forgot"href="">I forgot my password</a>
         </div>
     </div>
