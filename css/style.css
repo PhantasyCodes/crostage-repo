@@ -82,10 +82,16 @@ body {
     height: auto;
 }
 
+.search-form{
+    display: flex;
+    border-bottom: solid 2px rgb(0, 0, 0);    
+    padding-bottom: 5px;
+}
+
 .search-bar {
+    display: flex;
     margin-left: 20px;
     max-width: 13vw;
-    border-bottom: solid 2px rgb(0, 0, 0);
 }
 
 .search-bar input {
@@ -121,7 +127,7 @@ body {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-family: Josefin Sans;
-    font-size: 1.5em; 
+    font-size: 1.4vw; 
     padding: 0 20px;
 }
 
@@ -769,7 +775,8 @@ button:focus {
 .sign-in-left h2 {
     font-family: Cormorant;
     font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
 }
 
 .sign-in-hero {

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +13,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="anim" class="loader">
-    </div>
+    <!-- <div id="anim" class="loader"> -->
+    <!-- </div> -->
     <nav class="navbar">
         <div class="container">
             <div class="search-bar">
-              <form action="/action_page.php">
-                  <input type="text" placeholder="Find something..." name="search">
+              <form action="/action_page.php" class="search-form">
+                  <input type="text" placeholder="Find something..." name="search" >
                   <i class="fa fa-search"></i>
               </form>
             </div>
