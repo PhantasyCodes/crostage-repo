@@ -105,7 +105,6 @@ body {
     font-family: Josefin sans;
     font-size: 1rem;
     padding: 0;
-
 }
 
 .search-bar input::placeholder {
@@ -813,7 +812,7 @@ button:focus {
 }
 
 .forms input {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 23vw;
     border-bottom: solid 2px rgb(0, 0, 0);
 }
@@ -883,4 +882,4 @@ button:focus {
         position: relative;
         min-width: 22vw;
     }
-  }
+}

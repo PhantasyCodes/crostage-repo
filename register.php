@@ -12,8 +12,8 @@
     <nav class="navbar">
         <div class="container">
             <div class="search-bar">
-              <form action="/action_page.php">
-                  <input type="text" placeholder="Find something..." name="search">
+              <form action="/action_page.php" class="search-form">
+                  <input type="text" placeholder="Find something..." name="search" >
                   <i class="fa fa-search"></i>
               </form>
             </div>
