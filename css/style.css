@@ -141,6 +141,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .logo-wrapper {
+        left: 0;
+    }
     .search-bar {
         display: none;
     }
@@ -152,7 +155,7 @@ body {
     .signin-link {
         margin-top: 5px;
         position: relative;
-        min-width: 20vw;
+        min-width: 30vw;
     }
   }
 
