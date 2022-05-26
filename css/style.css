@@ -906,7 +906,6 @@ button:focus {
     .hero-left img {
         position: relative;
         bottom: 0;
-        
         display: block;
         max-width: 70vw;
         z-index: -1;
