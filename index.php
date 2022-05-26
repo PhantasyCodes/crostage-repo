@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="anim" class="loader">
-    </div>
+    <!-- <div id="anim" class="loader"> -->
+    <!-- </div> -->
     <nav class="navbar">
         <div class="container">
             <div class="search-bar">
@@ -38,6 +38,7 @@
                 <h1>Make yourself feel <br> comfortable</h1>
                 <h2>Be best dressed. All day, everyday</h2>
                 <a href=""><button id="btn1">Our collection <i class="fa fa-arrow-right"></i></button></a>
+                <img src="images/fur_hat.png" alt="">
             </div>
             <div class="hero-right">
                 <div class="todays-closet">
