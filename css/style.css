@@ -141,41 +141,6 @@ body {
     min-width: 130px;
 }
 
-@media screen and (max-width: 600px) {
-
-    .logo-wrapper {
-        width: 200px;
-        margin-left: 10px;
-    }
-
-    .logo-wrapper a {
-        height: auto;
-        width: 100px;
-        margin-right: 100px;
-    }
-
-    .logo-wrapper img {
-        max-width: 100%;
-    }
-
-    .search-bar {
-        display: none;
-    }
-
-    .nav-links a {
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    .signin-link {
-        margin-top: 5px;
-        position: relative;
-        min-width: 22vw;
-    }
-  }
-
-
-
 .signin-link::after {
     content: "";
     position: absolute;
@@ -195,7 +160,6 @@ body {
     margin-right: 20px;
 }
 
-
 .hero {
     height: 100vh;
     display: flex;
@@ -209,7 +173,8 @@ body {
 }
 
 .hero-left h1 {
-    font-size: 96px;
+    font-size: 5vw;
+    /* font-size: 96px; */
     font-weight: lighter;
     margin-bottom: 20px;
 }
@@ -886,3 +851,36 @@ button:focus {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 600px) {
+
+    .logo-wrapper {
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .logo-wrapper a {
+        height: auto;
+        width: 100px;
+        margin-right: 100px;
+    }
+
+    .logo-wrapper img {
+        max-width: 100%;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .nav-links a {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .signin-link {
+        margin-top: 5px;
+        position: relative;
+        min-width: 22vw;
+    }
+  }

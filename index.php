@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- <div id="anim" class="loader"> -->
-    <!-- </div> -->
+    <div id="anim" class="loader">
+    </div>
     <nav class="navbar">
         <div class="container">
             <div class="search-bar">
