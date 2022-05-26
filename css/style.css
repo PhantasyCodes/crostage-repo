@@ -897,11 +897,24 @@ button:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         width: 100vw;
         padding: 0;
-        padding-top: 10vh;
+        padding-top: 15vh;
         height: 100vh;
+        overflow: hidden;
     }
+
+    .hero-left h1 {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .hero-left h2 {
+        font-size: 5vw;
+        margin-bottom: 10px;
+    }
+
 
     .hero-left img {
         position: relative;
@@ -909,5 +922,24 @@ button:focus {
         display: block;
         max-width: 70vw;
         z-index: -1;
+    }
+
+    #btn1 {
+        position: absolute;
+        box-shadow: grey 5px 5px;
+        top: 80vh;
+        left: 30vw;
+        padding: 10px 10px;
+        font-size: 1rem;
+        font-family: Josefin Sans;
+        color: rgb(255, 255, 255);
+        background-color: #bc6c25;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition-duration: 0.4s;
     }
 }
