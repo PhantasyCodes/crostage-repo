@@ -75,6 +75,7 @@ body {
 .logo-wrapper a {
     display: flex;
     justify-content: center;
+    height: auto;
 }
 
 .logo-wrapper img {
@@ -141,21 +142,35 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+
     .logo-wrapper {
-        left: 0;
+        width: 200px;
+        margin-left: 10px;
     }
+
+    .logo-wrapper a {
+        height: auto;
+        width: 100px;
+        margin-right: 100px;
+    }
+
+    .logo-wrapper img {
+        max-width: 100%;
+    }
+
     .search-bar {
         display: none;
     }
 
     .nav-links a {
-      font-size: 1rem;
+        padding: 0;
+        font-size: 1rem;
     }
 
     .signin-link {
         margin-top: 5px;
         position: relative;
-        min-width: 30vw;
+        min-width: 22vw;
     }
   }
 
