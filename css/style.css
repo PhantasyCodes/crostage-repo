@@ -906,12 +906,14 @@ button:focus {
     }
 
     .hero-left h1 {
-        font-size: 10vw;
+        font-size: 12vw;
+        font-weight: 400;
         text-align: center;
     }
 
     .hero-left h2 {
-        font-size: 5vw;
+        text-align: center;
+        font-size: 7vw;
         margin-bottom: 10px;
     }
 
