@@ -86,12 +86,13 @@ body {
     display: flex;
     border-bottom: solid 2px rgb(0, 0, 0);    
     padding-bottom: 5px;
+    width: 100%;
 }
 
 .search-bar {
     display: flex;
     margin-left: 20px;
-    max-width: 13vw;
+    max-width: 20vw;
 }
 
 .search-bar input {
@@ -103,7 +104,7 @@ body {
     font-family: Josefin sans;
     font-size: 1rem;
     padding: 0;
-    margin-right: 50px;
+
 }
 
 .search-bar input::placeholder {
@@ -112,6 +113,7 @@ body {
 
 .search-bar i {
     cursor: pointer;
+    padding-right: 5px;
 }
 
 .nav-links {
@@ -127,14 +129,34 @@ body {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-family: Josefin Sans;
-    font-size: 1.4vw; 
+    font-size: 1.4rem;
+    display: inline;
     padding: 0 20px;
 }
 
 .signin-link {
     margin-top: 5px;
     position: relative;
+    min-width: 130px;
 }
+
+@media screen and (max-width: 600px) {
+    .search-bar {
+        display: none;
+    }
+
+    .nav-links a {
+      font-size: 1rem;
+    }
+
+    .signin-link {
+        margin-top: 5px;
+        position: relative;
+        min-width: 20vw;
+    }
+  }
+
+
 
 .signin-link::after {
     content: "";
