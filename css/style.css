@@ -892,6 +892,10 @@ button:focus {
         min-width: 22vw;
     }
 
+    .hero {
+        margin-bottom: 8vh;
+    }
+
     .hero-right {
         display: none;
     }
@@ -905,8 +909,9 @@ button:focus {
         width: 100vw;
         padding: 0;
         padding-top: 15vh;
-        height: 92vh;
+        height: 100vh;
         overflow: hidden;
+        
     }
 
     .hero-left h1 {
@@ -920,7 +925,6 @@ button:focus {
         font-size: 7vw;
         margin-bottom: 10px;
     }
-
 
     .hero-left img {
         position: relative;
@@ -1063,28 +1067,11 @@ button:focus {
     }
     
     .section-3-left h1 {
-        z-index: 2;
         font-size: 34px;
-        margin-bottom: 30px;
-        font-weight: 500;
-        color: white;
     }
     
     .section-3-left h2 {
-        z-index: 7;
         font-size: 14px;
-        font-weight: 350;
-        margin-bottom: 50px;
-        color: white;
-    }
-    
-    .section-3-right {
-        height: 60vh;
-        width: 40vw;
-        margin-right: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     
     .section-3-right img {
@@ -1098,5 +1085,86 @@ button:focus {
     .sec-3-btn {
         width: 30vw;
         margin-left: 0px;
+    }
+
+    .slider-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+    
+    .slider-2 h1{
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    
+    .slider-2 h2{
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    
+    .slider-2 h3{
+        font-family: Josefin Sans;
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    
+    .slider-2 p {
+        font-family: Josefin Sans;
+        font-size: 1.1rem;
+        font-weight: 400;   
+        margin-bottom: 10px;
+    }
+    
+    .products {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box {
+        margin: 20 0px;
+        padding: 0px 20px;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box img {
+        max-width: 100px;
+    }
+    
+    #btn2 {
+        opacity: 0;
+        position: relative;
+        left: 90px;
+        bottom: 370px;
+        padding: 20px 20px;
+        font-size: 1rem;
+        font-family: Josefin Sans;
+        color: rgb(255, 255, 255);
+        background-color: #bc6c25;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition-duration: 0.4s;
+    }
+    
+    #btn2:hover {
+        background-color: #DDA15E;
+    }
+    
+    .box:hover {
+        background-color: #bc6b253d;
+    }
+    
+    .box:hover #btn2 {
+        opacity: 1;
     }
 }
