@@ -1016,7 +1016,7 @@ button:focus {
     .slider-description h3 {
         font-family: Josefin Sans;
         font-weight: 400;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         margin-bottom: 100px;
     }
     
@@ -1058,14 +1058,14 @@ button:focus {
     }
     
     .section-3-left h1 {
-        font-size: 54px;
+        font-size: 34px;
         margin-bottom: 30px;
         font-weight: 500;
         color: white;
     }
     
     .section-3-left h2 {
-        font-size: 24px;
+        font-size: 14px;
         font-weight: 350;
         margin-bottom: 50px;
         color: white;
@@ -1081,7 +1081,7 @@ button:focus {
     }
     
     .section-3-right img {
-        width: 400px;
+        max-width: 200px;
         margin-bottom: 90px;
     }
 }
