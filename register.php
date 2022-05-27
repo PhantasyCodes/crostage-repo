@@ -29,15 +29,15 @@
     <div class="hero register-hero">
         <div class="sign-in-right register-wrapper">
             <h2>Create an Account</h2>
-            <form class="forms" action="/action_page.php">
-                <input class="inputs" type="text" placeholder="First Name" name="">
-                <input class="inputs" type="text" placeholder="Last Name" name="">
-                <input class="inputs" type="text" placeholder="Username" name="">
-                <input class="inputs" type="text" placeholder="Phone No" name="">
-                <input class="inputs" type="text" placeholder="Email Address" name="">
-                <input class="inputs" type="text" placeholder="Password" name="">
+            <form id="form1" class="forms" action="php/process_register.php" method="post">
+                <input class="inputs" type="text" placeholder="First Name" name="firstname">
+                <input class="inputs" type="text" placeholder="Last Name" name="lastname">
+                <input class="inputs" type="text" placeholder="Username" name="username">
+                <input class="inputs" type="text" placeholder="Phone No" name="number">
+                <input class="inputs" type="text" placeholder="Email Address" name="email">
+                <input class="inputs" type="text" placeholder="Password" name="password">
             </form>
-            <a href=""><button class="shadow-btn">REGISTER</button></a>
+            <a href=""><button action="submit" form="form1" class="shadow-btn">REGISTER</button></a>
             <a class="forgot"href="">I forgot my password</a>
         </div>
     </div>

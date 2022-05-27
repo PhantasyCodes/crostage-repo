@@ -125,8 +125,10 @@
                             <h3>Ksh 1000</h3>
                             <p>Product description is what describes what the product really is. Like dont you get I’m just filling space by now?</p>
                             <a href=""><button class="shadow-btn slider-btn">SHOP NOW</button></a>
-                        </div> 
-                        <img src="images/hunger-games.png" alt="">
+                        </div>
+                        <div class="slider-image">
+                            <img src="images/hunger-games.png" alt="">
+                        </div>
                     </div>
                     <div class="slider">
                         <div class="slider-description">

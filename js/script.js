@@ -56,7 +56,7 @@ $(document).ready(function(){
         slideBy: 1,
         margin: 10,
         items: 1,
-        autoplay: true,
+        autoplay: false,
         loop: true
     });
 });

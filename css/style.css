@@ -489,7 +489,11 @@ button:focus {
     flex-direction: row;
 }
 
-.slider img {
+.slider-image {
+    height: 100vh;
+}
+
+.slider-image img {
     max-width: 400px;
 }
 
@@ -827,7 +831,7 @@ button:focus {
     background-color: rgba(0, 0, 0, 0.0);
     outline: none;
     text-align: left;
-    color: #000000;
+    color: #bc6c25;
     font-family: Josefin sans;
     font-size: 1rem;
     padding: 0;
@@ -943,5 +947,141 @@ button:focus {
         align-items: center;
         justify-content: space-between;
         transition-duration: 0.4s;
+    }
+
+    .carousel-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    
+    .carousel-heading h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    
+    .carousel-heading h2 {
+        font-size: 22px;
+        font-weight: 300;
+    }
+    
+    .owl-carousel-wrapper {
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+    
+    .owl-stage-outer {
+        height: 100vh;
+    }
+    
+    .slider {
+        align-items: center;
+        height: 100%;
+    }
+
+    .slider-image {
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+    }
+    
+    .slider img {
+        margin-left: 20vw;
+        margin-bottom: 100px;
+        max-width: 150px;
+    }
+    
+    .slider-description {
+        width: 30vw;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    
+    .slider-description h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    
+    .slider-description h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    
+    .slider-description h3 {
+        font-family: Josefin Sans;
+        font-weight: 400;
+        font-size: 0.5rem;
+        margin-bottom: 100px;
+    }
+    
+    .slider-description p {
+        font-family: Josefin Sans;
+        font-weight: 300;
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .owl-nav {
+        position: absolute;
+        right: 50px;
+        bottom: 300px;
+        transform: scale(0.5);
+    }
+
+    .section-3 {
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sec-3-wrapper {
+        padding: 50px 0;
+        width: 95vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #BC6C25;
+        box-shadow: 15px 15px 30px #0000008a;
+    }
+    
+    .section-3-left {
+        padding-left: 80px;
+    }
+    
+    .section-3-left h1 {
+        font-size: 54px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        color: white;
+    }
+    
+    .section-3-left h2 {
+        font-size: 24px;
+        font-weight: 350;
+        margin-bottom: 50px;
+        color: white;
+    }
+    
+    .section-3-right {
+        height: 60vh;
+        width: 40vw;
+        margin-right: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section-3-right img {
+        width: 400px;
+        margin-bottom: 90px;
     }
 }
