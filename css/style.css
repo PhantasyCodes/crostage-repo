@@ -1210,4 +1210,54 @@ button:focus {
         transform: scale(0.7);
         padding: 7px 0px;
     }
+
+    .sign-in-left {
+        margin-top: 60vh;
+        padding: 0;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: solid black 2px;
+    }
+    
+    .sign-in-left h2 {
+        font-family: Cormorant;
+        font-weight: 600;
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .sign-in-hero {
+        padding: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .sign-in-right {
+        width: 100vw;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sign-in-right h2 {
+        font-family: Cormorant;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .sign-in-right h3 {
+        font-family: Josefin Sans;
+        font-weight: 300;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .forms input {
+        width: 100%;
+    }
 }
