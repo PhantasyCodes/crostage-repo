@@ -988,14 +988,14 @@ button:focus {
     }
     
     .slider img {
-        margin-left: 20vw;
         margin-bottom: 100px;
         max-width: 150px;
     }
     
     .slider-description {
-        width: 30vw;
-        padding: 20px 20px;
+        height: 100vh;
+        width: 50vw;
+        padding: 0px 2s0px;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -1017,13 +1017,13 @@ button:focus {
         font-family: Josefin Sans;
         font-weight: 400;
         font-size: 0.7rem;
-        margin-bottom: 100px;
+        margin-bottom: 10px;
     }
     
     .slider-description p {
         font-family: Josefin Sans;
         font-weight: 300;
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-bottom: 30px;
     }
     
@@ -1032,6 +1032,11 @@ button:focus {
         right: 50px;
         bottom: 300px;
         transform: scale(0.5);
+    }
+
+    .shadow-btn {
+        padding: 10px 10px;
+        font-size: 1rem;
     }
 
     .section-3 {
@@ -1054,10 +1059,11 @@ button:focus {
     }
     
     .section-3-left {
-        padding-left: 80px;
+        padding-left: 20px;
     }
     
     .section-3-left h1 {
+        z-index: 2;
         font-size: 34px;
         margin-bottom: 30px;
         font-weight: 500;
@@ -1065,6 +1071,7 @@ button:focus {
     }
     
     .section-3-left h2 {
+        z-index: 7;
         font-size: 14px;
         font-weight: 350;
         margin-bottom: 50px;
@@ -1081,7 +1088,15 @@ button:focus {
     }
     
     .section-3-right img {
+        opacity: 0.5;
+        left: 40vw;
+        position: absolute;
         max-width: 200px;
         margin-bottom: 90px;
+    }
+
+    .sec-3-btn {
+        width: 30vw;
+        margin-left: 0px;
     }
 }
