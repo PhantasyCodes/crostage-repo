@@ -1,6 +1,6 @@
 <?php
 
-$server_name = "localhost";
+$server_name = "localhost:3306";
 $username = "crostage_admin";
 $password = "D@v1dK1ng";
 $database="crostage_db";
