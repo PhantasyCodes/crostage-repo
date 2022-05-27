@@ -12,7 +12,7 @@ $number = $_POST["number"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 
-$sql = "INSERT INTO users (first_name, last_name, username, phone_no, email, password) 
-VALUES ('$first_name', '$last_name', '$username', '$number', '$email', '$password')";
+$sql = "INSERT INTO users (first_name, last_name, username, phone_no, email, password, type) 
+VALUES ('$first_name', '$last_name', '$username', '$number', '$email', '$password', 'user')";
 
 mysqli_query($connection, $sql);

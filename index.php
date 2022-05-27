@@ -138,7 +138,9 @@
                             <p>Product description is what describes what the product really is. Like dont you get I’m just filling space by now?</p>
                             <a href=""><button class="shadow-btn slider-btn">SHOP NOW</button></a>
                         </div>
-                        <img src="images/afro-hoodie.png" alt="">
+                        <div class="slider-image">
+                            <img src="images/afro-hoodie.png" alt="">
+                        </div>
                     </div>
                     <div class="slider">
                         <div class="slider-description">
@@ -148,7 +150,9 @@
                             <p>Product description is what describes what the product really is. Like dont you get I’m just filling space by now?</p>
                             <a href=""><button class="shadow-btn slider-btn">SHOP NOW</button></a>
                         </div>
-                        <img src="images/raincoat-pink.png" alt="">
+                        <div class="slider-image">
+                            <img src="images/raincoat-pink.png" alt="">
+                        </div>
                     </div>
                     <div class="slider">
                         <div class="slider-description">
@@ -158,7 +162,9 @@
                             <p>Product description is what describes what the product really is. Like dont you get I’m just filling space by now?</p>
                             <a href=""><button class="shadow-btn slider-btn">SHOP NOW</button></a>
                         </div>
-                        <img src="images/brown_shirt_front.png" alt="">
+                        <div class="slider-image">
+                            <img src="images/brown_shirt_front.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
