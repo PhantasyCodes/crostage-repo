@@ -24,7 +24,7 @@
               </form>
             </div>
             <div class="logo-wrapper">
-                <a href=""><img class=logo src="images/logo-black.png" alt=""></a>
+                <a href="#"><img class=logo src="images/logo-black.png" alt=""></a>
             </div>
             <div class="nav-links">
                 <a class="signin-link" href="signin.php">SIGN IN</a>
@@ -37,7 +37,7 @@
             <div class="hero-left">
                 <h1>Make yourself feel <br> comfortable</h1>
                 <h2>Be best dressed. All day, everyday</h2>
-                <a href=""><button id="btn1">Our collection <i class="fa fa-arrow-right"></i></button></a>
+                <a href="shop.php"><button id="btn1">Our collection <i class="fa fa-arrow-right"></i></button></a>
                 <img src="images/fur_hat.png" alt="">
             </div>
             <div class="hero-right">
@@ -124,7 +124,7 @@
                             <h1>Hunger Games</h1>
                             <h3>Ksh 1000</h3>
                             <p>Product description is what describes what the product really is. Like dont you get I’m just filling space by now?</p>
-                            <a href=""><button class="shadow-btn slider-btn">SHOP NOW</button></a>
+                            <a href="shop.php"><button class="shadow-btn slider-btn">SHOP NOW</button></a>
                         </div>
                         <div class="slider-image">
                             <img src="images/hunger-games.png" alt="">
