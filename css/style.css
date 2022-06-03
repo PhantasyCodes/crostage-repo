@@ -43,6 +43,7 @@ body {
     width: 100%;
     background-color: #FAEDCD;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .loader {
@@ -130,6 +131,7 @@ body {
     color: rgb(0, 0, 0);
     font-family: Josefin Sans;
     font-size: 1.4rem;
+    font-weight: 400;
     display: inline;
     padding: 0 20px;
 }
@@ -860,6 +862,165 @@ button:focus {
     align-items: center;
 }
 
+.product-page-wrapper {
+    height: 100vh;
+    display: flex;
+}
+
+.side-panel {
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+    top: 0;
+    left: 0;
+    background-color: #bc6c25;
+}
+
+.side-panel img {
+    position: absolute;
+    max-width: 150px;
+    top: 20px;
+    left: 20px;
+}
+
+.product-content {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-panel-links {
+    margin-top: 10vh;
+}
+
+.side-btns {
+    width: 100%;
+    background-color: #bc6c25;
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    color: white;
+    text-align: start;
+    padding-left: 30%;
+    font-weight: 300;
+}
+
+.btn-active {
+    background-color: #FAEDCD;
+    color: black;
+    font-weight: 400;
+}
+
+.product-head {
+    display: flex;
+    margin-top: 30vh;
+    width: 80%;
+    margin-left: 5vw;
+    margin-bottom: 15px;
+}
+
+.product-head h1 {
+    font-size: 3.5rem;
+    margin-right: 10%;
+}
+
+.btn4 {
+    margin-top: 25px;
+    font-family: Josefin Sans;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: solid 2px black;
+    margin-right: 40px;
+}
+
+.products-table {
+    height: 60vh;
+    width: 80%;
+    background-color: white;
+    margin-left: 5vw;
+}
+
+.product-form-wrapper {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.product-form-wrapper h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.product-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form-wrapper input[type=text] {
+    width: 60%;
+    outline: none;
+    margin: 10px 0px;
+    height: 50px;
+    padding-left: 10px;
+    border: grey 1px solid;
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+}
+
+.product-form-wrapper input[type=file] {
+    margin: 10px 0px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.product-form-wrapper input::placeholder {
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+}
+
+.product-form-wrapper textarea {
+    width: 60%;
+    outline: none;
+    margin: 10px 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: grey 1px solid;
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+}
+
+.product-form-wrapper select {
+    outline: none;
+    width: 10%;
+    height: 50px;
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+    color: #888888;
+    border: grey 1px solid;
+    margin: 10px 0px;
+}
+
+.product-form-wrapper select > option {
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.product-form-wrapper textarea::placeholder {
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+}
+
+.product-form-wrapper h2 {
+    font-weight: 400;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
 @media screen and (max-width: 600px) {
 
     .logo-wrapper {
@@ -1221,7 +1382,7 @@ button:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: solid black 2px;
+        border-right: none;
     }
     
     .sign-in-left h2 {
