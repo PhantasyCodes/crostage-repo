@@ -24,7 +24,7 @@
         <div class="product-content">
             <div class="product-form-wrapper">
                 <h1>Add New Product:</h1>
-                <form id="form2" class="product-form" action="../php/product_push.php">
+                <form id="form2" class="product-form" action="../php/product_push.php" method="post">
                     <input type="text" name="pname" placeholder="Product Name">
                     <input type="text" name="price" placeholder="Product Price">
                     <input type="text" name="stock" placeholder="No in stock">
