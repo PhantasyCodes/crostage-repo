@@ -12,7 +12,7 @@ $description = $_POST["pdescription"];
 $category = $_POST["category"];
 $img = $_POST["img"];
 
-// $sql = "INSERT INTO users (first_name, last_name, username, phone_no, email, password, type) 
-// VALUES ('$first_name', '$last_name', '$username', '$number', '$email', '$password', 'user')";
+$sql = "INSERT INTO products (product_name, product_description, product_price, product_img, stock) 
+VALUES ('$product_name', '$description', '$price', '$img', '$stock')";
 
-// mysqli_query($connection, $sql);
+mysqli_query($connection, $sql);
