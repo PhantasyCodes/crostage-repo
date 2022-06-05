@@ -30,30 +30,30 @@
                     <input type="text" name="stock" placeholder="No in stock">
                     <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description"></textarea>
                     <select name="category" id="">
-                        <?php
-                        require("connect.php");
-
-                        $category_sql = "SELECT category_id, category_name FROM categories";
-
-                        $category_table = mysqli_query($connection, $category_sql);
-
-
-                        for($i = 0; $i <= mysqli_num_rows($category_table); $i++){
-                            $row = mysqli_fetch_array($category_table, MYSQLI_ASSOC);
-                            $option_value = $row['category_id'];
-                            $option_name = $row['category_name'];
-                            echo "<option value='$option_value'>$option_name</option>";
-                            
-                        }
-                        ?>
+                        
                     </select>
                     <h2>Product Image:</h2>
                     <input name="img" type="file">
                 </form>
-                <?php
-                        echo "<h2>$row</h2>"
-                        ?>
+
                 <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
+                <?php
+                require("connect.php");
+
+                $category_sql = "SELECT category_id, category_name FROM categories";
+
+                $category_table = mysqli_query($connection, $category_sql);
+
+
+                for($i = 0; $i <= mysqli_num_rows($category_table); $i++){
+                    echo "<h1>Nice</h1>";
+                    // $row = mysqli_fetch_array($category_table, MYSQLI_ASSOC);
+                    // $option_value = $row['category_id'];
+                    // $option_name = $row['category_name'];
+                    // echo "<option value='$option_value'>$option_name</option>";
+                    
+                }
+                ?>
             </div>
         </div>
     </div>
