@@ -17,9 +17,12 @@ VALUES ('$product_name', '$description', '$price', '$img', '$stock')";
 
 mysqli_query($connection, $sql);
 
-$prod_id = "SELECT product_id FROM products WHERE product_name = '$product_name'";
-$prod_id_result = mysql_fetch_array($prod_id);
-$final_id = $prod_id_result['prod_id'];
+$prod_id = "SELECT product_id FROM products WHERE product_name = '$product_name';";
+
+$result = mysqli_query($connection, $prod_id);
+
+$prod_id_result = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$final_id = $prod_id_result['product_id'];
 
 $sql2 = "INSERT INTO category_item (category_id, product_id) VALUES ('$category', '$final_id')";
 
