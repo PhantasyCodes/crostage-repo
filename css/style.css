@@ -887,7 +887,7 @@ button:focus {
     position: absolute;
     right: 0;
     width: 80vw;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
 }
@@ -1021,7 +1021,7 @@ button:focus {
     margin-left: 10px;
 }
 
-.drop-bow {
+.drop-box {
     width: 30vw;
     height: 10vh;
 }
