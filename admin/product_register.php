@@ -31,9 +31,9 @@
                     <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description"></textarea>
                     <select name="category" id="">
                         <option value="" disabled selected hidden>Category:</option>
-                        <option value="saab">2</option>
-                        <option value="mercedes">3</option>
-                        <option value="audi">4</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
                     </select>
                     <h2>Product Image:</h2>
                     <input name="img" type="file">
