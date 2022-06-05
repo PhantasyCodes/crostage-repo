@@ -1021,6 +1021,10 @@ button:focus {
     margin-left: 10px;
 }
 
+.drop-bow {
+    width: 30vw;
+    height: 10vh;
+}
 @media screen and (max-width: 600px) {
 
     .logo-wrapper {
