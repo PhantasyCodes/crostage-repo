@@ -40,7 +40,6 @@
 
                         for($i = 0; $i <= mysqli_num_rows($category_table); $i++){
                             $row = mysqli_fetch_array($category_table);
-                            echo "<h2>$row</h2>";
                             $option_value = $row['category_id'];
                             $option_name = $row['category_name'];
                             echo "<option value='$option_value'>$option_name</option>";
@@ -51,6 +50,9 @@
                     <h2>Product Image:</h2>
                     <input name="img" type="file">
                 </form>
+                <?php
+                        echo "<h2>$row</h2>"
+                        ?>
                 <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
             </div>
         </div>
