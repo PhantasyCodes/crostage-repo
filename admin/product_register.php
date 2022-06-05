@@ -30,10 +30,21 @@
                     <input type="text" name="stock" placeholder="No in stock">
                     <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description"></textarea>
                     <select name="category" id="">
-                        <option value="" disabled selected hidden>Category:</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                        <option value="3">4</option>
+                        <?php
+                        require("product_push.php");
+
+                        $category_sql = "SELECT category_id, category_name FROM categories";
+
+                        $category_table = mysqli_query($connection, $category_sql);
+                        
+                        if(mysqli_num_rows($category_table) > 0){
+                            while($row = mysqli_fetch_array($category_table)){
+                                $option_value = $row['category_id'];
+                                $option_name = $row['category_name'];
+                                echo "<option value='$option_value'>$option_name</option>";
+                            }
+                        }
+                        ?>
                     </select>
                     <h2>Product Image:</h2>
                     <input name="img" type="file">
