@@ -36,7 +36,7 @@
 
                 <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
                 <?php
-                require("connect.php");
+                require("../php/connect.php");
 
                 
 
@@ -44,16 +44,16 @@
 
                 $category_table = mysqli_query($connection, $category_sql);
 
-                echo "<h1>Nice</h1>";
+                // echo "<h1>Nice</h1>";
                 
 
 
                 for($i = 0; $i <= mysqli_num_rows($category_table); $i++){
-                    echo "<h1>Nice</h1>";
-                    // $row = mysqli_fetch_array($category_table, MYSQLI_ASSOC);
-                    // $option_value = $row['category_id'];
-                    // $option_name = $row['category_name'];
-                    // echo "<option value='$option_value'>$option_name</option>";
+                    // echo "<h1>Nice</h1>";
+                    $row = mysqli_fetch_array($category_table, MYSQLI_ASSOC);
+                    $option_value = $row['category_id'];
+                    $option_name = $row['category_name'];
+                    echo "<option value='$option_value'>$option_name</option>";
                     
                 }
                 ?>
