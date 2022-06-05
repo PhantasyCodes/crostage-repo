@@ -37,12 +37,12 @@
 
                         $category_table = mysqli_query($connection, $category_sql);
 
-                        if(mysqli_num_rows($category_table) > 0){
-                            while($row = mysqli_fetch_array($category_table)){
-                                $option_value = $row['category_id'];
-                                $option_name = $row['category_name'];
-                                echo "<option value='$option_value'>$option_name</option>";
-                            }
+                        for($i = 0; $i <= mysqli_num_rows($category_table); $i++){
+                            $row = mysqli_fetch_array($category_table);
+                            $option_value = $row['category_id'];
+                            $option_name = $row['category_name'];
+                            echo "<option value='$option_value'>$option_name</option>";
+                            
                         }
                         ?>
                     </select>
