@@ -31,12 +31,12 @@
                     <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description"></textarea>
                     <select name="category" id="">
                         <?php
-                        require("product_push.php");
+                        require("connect.php");
 
                         $category_sql = "SELECT category_id, category_name FROM categories";
 
                         $category_table = mysqli_query($connection, $category_sql);
-                        
+
                         if(mysqli_num_rows($category_table) > 0){
                             while($row = mysqli_fetch_array($category_table)){
                                 $option_value = $row['category_id'];
