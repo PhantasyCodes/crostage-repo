@@ -28,14 +28,7 @@
                     <input type="text" name="stock" placeholder="No in stock">
                     <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description"></textarea>
                     <select name="category" id="">
-                        
-                    </select>
-                    <h2>Product Image:</h2>
-                    <input name="img" type="file">
-                </form>
-
-                <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
-                <?php
+                    <?php
                 require("../php/connect.php");
 
                 
@@ -57,6 +50,12 @@
                     
                 }
                 ?>
+                    </select>
+                    <h2>Product Image:</h2>
+                    <input name="img" type="file">
+                </form>
+
+                <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
             </div>
         </div>
     </div>
