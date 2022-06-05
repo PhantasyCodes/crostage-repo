@@ -36,12 +36,15 @@
 
                 <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
                 <?php
-                echo "<h1>Nice</h1>";
                 require("connect.php");
 
-                $category_sql = "SELECT category_id, category_name FROM categories";
+                
+
+                $category_sql = "SELECT category_id, category_name FROM categories;";
 
                 $category_table = mysqli_query($connection, $category_sql);
+
+                echo "<h1>Nice</h1>";
                 
 
 
