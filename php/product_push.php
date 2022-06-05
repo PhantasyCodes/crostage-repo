@@ -10,7 +10,15 @@ $price = $_POST["price"];
 $stock = $_POST["stock"];
 $description = $_POST["pdescription"];
 $category = $_POST["category"];
-$img = $_POST["img"];
+$img = $_POST["file"];
+
+$filename = $_FILES['file']['name'];
+
+$location = "../images/".$filename;
+
+if( move_uploaded_file($_FILES['file']['tmp_name'], $location)) {
+    echo 'File uploaded succesfully';
+}
 
 $sql = "INSERT INTO products (product_name, product_description, product_price, product_img, stock) 
 VALUES ('$product_name', '$description', '$price', '$img', '$stock')";

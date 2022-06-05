@@ -971,9 +971,7 @@ button:focus {
 }
 
 .product-form-wrapper input[type=file] {
-    margin: 10px 0px;
-    padding-left: 10px;
-    margin-bottom: 30px;
+    display: none;
 }
 
 .product-form-wrapper input::placeholder {
@@ -1023,8 +1021,31 @@ button:focus {
 
 .drop-box {
     width: 30vw;
-    height: 10vh;
+    height: 20vh;
+    border: grey 1px solid;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+    cursor: pointer;
 }
+
+.drop-box-overlay {
+    position: absolute;
+    width: 30vw;
+    height: 20vh;
+}
+
+.drop-box h2 {
+    color: gray;
+    text-align: center;
+}
+
+.drop-box-over {
+    border: none;
+}
+
 @media screen and (max-width: 600px) {
 
     .logo-wrapper {

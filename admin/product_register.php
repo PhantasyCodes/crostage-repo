@@ -22,7 +22,7 @@
         <div class="product-content">
             <div class="product-form-wrapper">
                 <h1>Add New Product:</h1>
-                <form id="form2" class="product-form" action="../php/product_push.php" method="post">
+                <form id="form2" class="product-form" action="../php/product_push.php" method="post" enctype="multipart/form-data">
                     <input type="text" name="pname" placeholder="Product Name">
                     <input type="text" name="price" placeholder="Product Price">
                     <input type="text" name="stock" placeholder="No in stock">
@@ -42,9 +42,9 @@
                     }
                     ?>
                     </select>
-                    <h2>Product Image:</h2>
                     <div class="drop-box">
-                        <input name="img" type="file">
+                        <h2 class="drop-box-prompt">DRAG OR CLICK TO UPLOAD PRODUCT IMAGE</h2>
+                        <input class="drop-zone-input" name="file" type="file">
                     </div>
                     
                 </form>
@@ -53,5 +53,63 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll(".drop-zone-input").forEach(inputElement => {
+        const dropZoneElement = inputElement.closest(".drop-box");
+
+        dropZoneElement.addEventListener("click", e => {
+            inputElement.click();
+        })
+
+        inputElement.addEventListener("change", e => {
+            if (inputElement.files.length) {
+                updateOverlay(dropZoneElement, inputElement.files[0]);
+            }
+        })
+
+        dropZoneElement.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-box-over");
+        });
+
+        ["dragleave", "dragend"].forEach(type => {
+            dropZoneElement.addEventListener(type, e=> {
+                dropZoneElement.classList.remove("drop-box-over")
+            })
+        });
+
+        dropZoneElement.addEventListener("drop", e => {
+            e.preventDefault();
+            if(e.dataTransfer.files.length) {
+                inputElement.files = e.dataTransfer.files;
+                updateOverlay(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-box-over");
+        });
+        });
+
+        function updateOverlay(dropZoneElement, file) {
+            let overlayElement = dropZoneElement.querySelector(".drop-box-overlay");
+
+            if (dropZoneElement.querySelector(".drop-box-prompt")) {
+                dropZoneElement.querySelector(".drop-box-prompt").remove();
+            }
+
+            if (!overlayElement) {
+                overlayElement = document.createElement("div");
+                overlayElement.classList.add("drop-box-overlay");
+                dropZoneElement.appendChild(overlayElement);
+            }
+
+            if (file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    overlayElement.style.backgroundImage = `url('${ reader.result }')`;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
