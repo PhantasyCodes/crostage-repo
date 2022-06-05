@@ -39,7 +39,7 @@
 
 
                         for($i = 0; $i <= mysqli_num_rows($category_table); $i++){
-                            $row = mysqli_fetch_array($category_table);
+                            $row = mysqli_fetch_array($category_table, MYSQLI_ASSOC);
                             $option_value = $row['category_id'];
                             $option_name = $row['category_name'];
                             echo "<option value='$option_value'>$option_name</option>";
