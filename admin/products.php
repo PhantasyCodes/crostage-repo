@@ -18,6 +18,8 @@
             <div class="side-panel-links">
                 <a href=""><button class="side-btns">Dashboard</button></a>
                 <a href=""><button class="side-btns btn-active">Products</button></a>
+                    <a href=""><button class="side-btns sub-button">Categories</button></a>
+                    <a href=""><button class="side-btns sub-button">Add New</button></a>
                 <a href=""><button class="side-btns">Sign Out</button></a>
             </div>
         </div>
