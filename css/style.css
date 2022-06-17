@@ -908,6 +908,15 @@ button:focus {
     font-weight: 300;
 }
 
+.big-btn {
+    transition-duration: 0.3s;
+    border-inline-start: solid rgba(0, 0, 0, 0.0);
+}
+
+.big-btn:hover {
+    border-inline-start: solid black;
+}
+
 .btn-active {
     background-color: #FAEDCD;
     color: black;
@@ -919,7 +928,13 @@ button:focus {
     color: black;
     font-weight: 400;
     font-size: 1rem;
-    padding-left: 10%;
+    padding-left: 60%;
+    text-align: start;
+    transition-duration: 0.3s;
+}
+
+.sub-button:hover {
+    color: #bc6c25;
 }
 
 .product-head {

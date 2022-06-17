@@ -7,8 +7,6 @@
     <title>Crostaǵe</title>
     <link rel="icon" type="image/x-icon" href="images/bird.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -17,16 +15,16 @@
             <img src="../images/logo-white.png" alt="">
             <div class="side-panel-links">
                 <a href=""><button class="big-btn side-btns">Dashboard</button></a>
-                <a href=""><button class="big-btn side-btns btn-active">Products</button></a>
-                    <a href="product_register.php"><button class="side-btns sub-button">Add New</button></a>
-                <a href="categories.php"><button class="big-btn side-btns">Categories</button></a>
+                <a href="products.php"><button class="big-btn side-btns">Products</button></a>
+                <a href="categories.php"><button class="big-btn side-btns btn-active">Categories</button></a>
+                    <a href="category_register.php"><button class="side-btns sub-button">Add New</button></a>
                 <a href=""><button class="big-btn side-btns">Sign Out</button></a>
             </div>
         </div>
         <div class="product-content">
             <div class="product-head">
-                <h1>Products</h1>
-                <a href=""><button class="btn4">Add New</button></a>
+                <h1>Categories</h1>
+                <a href="category_register.php"><button class="btn4">Add New</button></a>
             </div>
             <div class="products-table">
 
