@@ -3,9 +3,8 @@
 
 require("../php/connect.php");
 
-$sql = "SELECT user_id, username FROM users";
+$sql = "SELECT * FROM users";
 
-$query = mysqli_query($connection, $sql);
-$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+$result = mysqli_query($connection, $sql);
 
-print_r($query);
+print_r($result);
