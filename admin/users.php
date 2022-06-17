@@ -3,7 +3,7 @@
 
 require("../php/connect.php");
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT user_id, username FROM users";
 
 $result = mysqli_query($connection, $sql);
 if (mysqli_num_rows($result) > 0) {
