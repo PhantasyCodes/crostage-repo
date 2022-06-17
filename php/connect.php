@@ -12,5 +12,5 @@ $connection = mysqli_connect($server_name, $username, $password, $database);
 // }else {
 //     echo "Connected Successfully";
 // }
-
+mysqli_close($connection);
 ?>
