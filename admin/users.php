@@ -32,7 +32,7 @@
 
             $result = mysqli_query($connection, $sql);
             print_r($result);
-            php?>
+            ?>
             </div>
         </div>
     </div>
