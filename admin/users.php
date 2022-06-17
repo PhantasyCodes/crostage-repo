@@ -31,7 +31,12 @@
             $sql = "SELECT * FROM users";
 
             $result = mysqli_query($connection, $sql);
-            print_r($result);
+            if (mysqli_num_rows($result) > 0) {
+                print_r($result);
+            }
+            else {
+                echo "Damn";
+            }
             ?>
             </div>
         </div>
