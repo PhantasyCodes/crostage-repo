@@ -1089,7 +1089,7 @@ th {
 }
 
 tr {
-    margin: 10px 0px;
+    padding: 10px 0px;
 }
 
 @media screen and (max-width: 600px) {
