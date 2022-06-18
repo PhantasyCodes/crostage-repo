@@ -1074,17 +1074,18 @@ button:focus {
 }
 
 table {
-    width: 100%;
+    width: 80%;
 }
 
 table > * {
     font-family: Josefin Sans;
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 th {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: start;
 }
 
