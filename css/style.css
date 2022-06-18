@@ -966,7 +966,6 @@ button:focus {
     margin-left: 5vw;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -1087,6 +1086,10 @@ th {
     font-size: 2rem;
     font-weight: 400;
     text-align: start;
+}
+
+tr {
+    margin: 10px 0px;
 }
 
 @media screen and (max-width: 600px) {
