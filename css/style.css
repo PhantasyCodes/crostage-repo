@@ -964,7 +964,10 @@ button:focus {
     width: 80%;
     background-color: white;
     margin-left: 5vw;
-    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .product-form-wrapper {
