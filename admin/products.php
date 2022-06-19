@@ -45,7 +45,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr><a><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></a></tr>";
+                            echo "<tr class='clickable-row' data-href='url://'><a><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></a></tr>";
                         }
                     } else {
                         echo "0 results";
@@ -57,5 +57,7 @@
             </div>
         </div>
     </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
