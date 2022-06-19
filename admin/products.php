@@ -45,7 +45,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo "<a><tr><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></tr></a>";
+                            echo "<tr><a><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></a></tr>";
                         }
                     } else {
                         echo "0 results";
