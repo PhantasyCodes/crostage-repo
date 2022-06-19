@@ -1091,6 +1091,11 @@ th {
 
 tr {
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+tr:hover {
+    background-color: gray;
 }
 
 td {
