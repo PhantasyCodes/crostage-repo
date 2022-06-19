@@ -60,9 +60,3 @@ $(document).ready(function(){
         loop: true
     });
 });
-
-$(document).ready(function() {
-    $(".clickable-row").click(function() {
-        window.location = $(this).data("href");
-    });
-});

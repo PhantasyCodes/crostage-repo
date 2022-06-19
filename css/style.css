@@ -1089,6 +1089,10 @@ th {
     text-align: start;
 }
 
+tr {
+    cursor: pointer;
+}
+
 td {
     padding: 5px 0px;
 }
