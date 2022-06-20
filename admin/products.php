@@ -38,14 +38,14 @@
                     <?php
                     require("../php/connect.php");
 
-                    $sql = "SELECT product_id, product_name, product_price FROM products";
+                    $sql = "SELECT product_img, product_id, product_name, product_price FROM products";
 
                     $result = mysqli_query($connection, $sql);
 
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke'><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></tr>";
+                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke'><img src='../images/" . $row['product_img'] . "'><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></tr>";
                         }
                     } else {
                         echo "0 results";
