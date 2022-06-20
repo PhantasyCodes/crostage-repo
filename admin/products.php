@@ -31,10 +31,10 @@
             <div class="products-table">
                 <table>
                     <tr>
-                        <th>Product Image</th>
-                        <th>Product ID</th>
-                        <th>Product Name</th>
-                        <th>Product Price</th>
+                        <th>Image</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
                     </tr>
                     <?php
                     require("../php/connect.php");
