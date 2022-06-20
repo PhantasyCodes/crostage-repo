@@ -965,8 +965,8 @@ button:focus {
     background-color: white;
     margin-left: 5vw;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    padding-left: 20px;
 }
 
 .product-form-wrapper {
@@ -1090,7 +1090,7 @@ th {
     font-size: 2rem;
     font-weight: 400;
     text-align: start;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 
 tr {
