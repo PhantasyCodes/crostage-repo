@@ -16,7 +16,7 @@
             <div class="side-panel-links">
                 <a href=""><button class="big-btn side-btns">Dashboard</button></a>
                 <a href=""><button class="big-btn side-btns btn-active">Users</button></a>
-                <a href=""><button class="big-btn side-btns">Products</button></a>
+                <a href="products.php"><button class="big-btn side-btns">Products</button></a>
                 <a href="categories.php"><button class="big-btn side-btns">Categories</button></a>
                 <a href=""><button class="big-btn side-btns">Sign Out</button></a>
             </div>

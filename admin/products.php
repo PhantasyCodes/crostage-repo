@@ -17,6 +17,7 @@
             <img src="../images/logo-white.png" alt="">
             <div class="side-panel-links">
                 <a href=""><button class="big-btn side-btns">Dashboard</button></a>
+                <a href="users.php"><button class="big-btn side-btns">Users</button></a>
                 <a href=""><button class="big-btn side-btns btn-active">Products</button></a>
                     <a href="product_register.php"><button class="side-btns sub-button">Add New</button></a>
                 <a href="categories.php"><button class="big-btn side-btns">Categories</button></a>
@@ -46,7 +47,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></tr>";
+                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>Ksh " . $row["product_price"] . "</td></tr>";
                         }
                     } else {
                         echo "0 results";
