@@ -1097,7 +1097,7 @@ tr {
     transition-duration: 0.3s;
 }
 
-tr:hover {
+.clickable-row:hover {
     background-color: gray;
 }
 
