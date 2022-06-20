@@ -1104,6 +1104,7 @@ tr {
 
 td {
     padding: 5px 10px;
+    max-width: 300px;
     margin: 0px;
     border: none;
 }
