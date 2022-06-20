@@ -1076,6 +1076,7 @@ table {
     margin-top: 30px;
     width: 80%;
     border: none;
+    border-spacing: 0px;
 }
 
 table > * {
@@ -1083,6 +1084,7 @@ table > * {
     font-size: 1.5rem;
     font-weight: 300;
     border: none;
+    border-spacing: 0px;
 }
 
 th {
