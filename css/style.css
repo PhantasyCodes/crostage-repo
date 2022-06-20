@@ -1108,6 +1108,10 @@ td {
     border: none;
 }
 
+.admin-img {
+    max-width: 50px;
+}
+
 @media screen and (max-width: 600px) {
 
     .logo-wrapper {

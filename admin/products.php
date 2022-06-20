@@ -46,7 +46,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke'><td><img src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></tr>";
+                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>" . $row["product_price"] . "</td></tr>";
                         }
                     } else {
                         echo "0 results";
