@@ -33,7 +33,7 @@
             $result = mysqli_query($connection, $sql);
 
             $row = mysqli_fetch_assoc($result);
-            echo "<img class='admin-img' src='../images/" . $row['product_img'] . ">";
+            echo "<img class='admin-img' src='../images/" . $row['product_img'] . "'>";
             mysqli_close($conn);
 
             ?>
