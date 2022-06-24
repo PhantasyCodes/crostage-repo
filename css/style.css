@@ -1046,9 +1046,9 @@ button:focus {
 }
 
 .drop-box {
-    width: 30vw;
-    height: 20vh;
-    border: grey 1px solid;
+    width: 23vw;
+    height: 40px;
+    border: black 1px solid;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -1057,24 +1057,13 @@ button:focus {
     cursor: pointer;
 }
 
-.drop-box2 {
-    border: black 1px solid;
-    height: 40px;
-    width: 23vw;
-}
-
 .drop-box-overlay {
     position: absolute;
-    width: 30vw;
-    height: 20vh;
+    width: 23vw;
+    height: 40px;
 }
 
 .drop-box h2 {
-    color: gray;
-    text-align: center;
-}
-
-.drop-box2 h2 {
     font-size: 1rem;
     font-family: Josefin sans;
     color: #000;
