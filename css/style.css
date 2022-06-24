@@ -962,7 +962,7 @@ button:focus {
 .products-table {
     height: 70%;
     width: 80%;
-    background-color: white;
+    background-color: rgb(255, 0, 0);
     margin-left: 5vw;
     display: flex;
     flex-direction: column;
