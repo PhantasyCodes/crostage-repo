@@ -46,7 +46,7 @@
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
                             $id = $row['product_id'];
-                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke/admin/product_edit.php?id=$row'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>Ksh " . $row["product_price"] . "</td></tr>";
+                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke/admin/product_edit.php?id=$id'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>Ksh " . $row["product_price"] . "</td></tr>";
                         }
                     } else {
                         echo "0 results";
