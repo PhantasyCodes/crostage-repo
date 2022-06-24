@@ -23,6 +23,20 @@
             </div>
         </div>
         <div class="product-content">
+            <?php
+            $id = $_REQUEST['id'];
+            
+            require("../php/connect.php");
+
+            $sql = "SELECT product_img, product_id, product_name, product_price FROM products WHERE product_id = '$id'";
+
+            $result = mysqli_query($connection, $sql);
+
+            $row = mysqli_fetch_assoc($result);
+            echo $row;
+            mysqli_close($conn);
+
+            ?>
         </div>
     </div>
     <script src="../js/jquery-3.6.0.min.js"></script>
