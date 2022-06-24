@@ -29,21 +29,22 @@
     <div class="hero register-hero">
         <div class="sign-in-right register-wrapper">
             <h2>Create an Account</h2>
-            <form id="form1" class="forms" action="php/process_register.php" method="post">
+            <form id="form1" class="forms" action="php/process_register.php" method="post" enctype="multipart/form-data">
                 <input class="inputs" type="text" placeholder="First Name" name="firstname">
                 <input class="inputs" type="text" placeholder="Last Name" name="lastname">
                 <input class="inputs" type="text" placeholder="Username" name="username">
                 <input class="inputs" type="text" placeholder="Phone No" name="number">
                 <input class="inputs" type="text" placeholder="Email Address" name="email">
                 <input class="inputs" type="text" placeholder="Password" name="password">
-                <div class="drop-box">
-                    <h2 class="drop-box-prompt">DRAG OR CLICK TO UPLOAD PRODUCT IMAGE</h2>
-                    <input class="drop-zone-input" name="file" type="file">
+                <div class="drop-box drop-box2">
+                    <h2 class="drop-box-prompt">Click to upload profile picture</h2>
+                    <input style="display:none" class="drop-zone-input" name="file" type="file">
                 </div>
             </form>
             <a href=""><button action="submit" form="form1" class="shadow-btn">REGISTER</button></a>
             <a class="forgot"href="">I forgot my password</a>
         </div>
     </div>
+    <script src="js/dragndrop.js"></script>
 </body>
 </html>

@@ -1057,6 +1057,12 @@ button:focus {
     cursor: pointer;
 }
 
+.drop-box2 {
+    border: black 1px solid;
+    height: 40px;
+    width: 23vw;
+}
+
 .drop-box-overlay {
     position: absolute;
     width: 30vw;
@@ -1066,6 +1072,13 @@ button:focus {
 .drop-box h2 {
     color: gray;
     text-align: center;
+}
+
+.drop-box2 h2 {
+    font-size: 1rem;
+    font-family: Josefin sans;
+    color: #000;
+    margin-top: 20px;
 }
 
 .drop-box-over {
