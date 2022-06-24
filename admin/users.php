@@ -28,7 +28,7 @@
             <div class="products-table">
                 <table>
                     <tr>
-                        <th>User ID</th>
+                        <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Username</th>
