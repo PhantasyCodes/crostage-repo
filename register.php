@@ -40,7 +40,7 @@
                     <h2 class="drop-box-prompt">Click to upload profile picture</h2>
                     <input style="display:none" class="drop-zone-input" name="file" type="file">
                 </div>
-                <a href=""><button action="submit" form="form1" class="shadow-btn">REGISTER</button></a>
+                <button action="submit" form="form1" class="shadow-btn" name="submit">REGISTER</button>
             </form>
             <a class="forgot"href="">I forgot my password</a>
         </div>
