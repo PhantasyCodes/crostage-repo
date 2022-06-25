@@ -43,8 +43,7 @@
                 <button action="submit" form="form1" class="shadow-btn reg-btn" name="submit">REGISTER</button>
             </form>
             <a class="forgot"href="">I forgot my password</a>
-        </div>
-        <?php
+            <?php
         if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyinput") {
                 echo "<p>Make sure to fill all fields</p>";
@@ -56,10 +55,11 @@
                 echo "<p>Please use a valid email</p>";
             }
             elseif ($_GET["error"] == "takenuid") {
-                echo "<p>Username is already taken</p>";
+                echo "<p>Username/email is already taken</p>";
             }
         }
         ?>
+        </div>
     </div>
     <script src="js/dragndrop.js"></script>
 </body>
