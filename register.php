@@ -47,7 +47,16 @@
         <?php
         if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyinput") {
-                echo "<p>fill</p>";
+                echo "<p>Make sure to fill all fields</p>";
+            }
+            elseif ($_GET["error"] == "invaliduid") {
+                echo "<p>Please use a valid username</p>";
+            }
+            elseif ($_GET["error"] == "invalidemail") {
+                echo "<p>Please use a valid email</p>";
+            }
+            elseif ($_GET["error"] == "takenuid") {
+                echo "<p>Username is already taken</p>";
             }
         }
         ?>
