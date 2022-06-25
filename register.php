@@ -40,10 +40,17 @@
                     <h2 class="drop-box-prompt">Click to upload profile picture</h2>
                     <input style="display:none" class="drop-zone-input" name="file" type="file">
                 </div>
-                <button action="submit" form="form1" class="shadow-btn" name="submit">REGISTER</button>
+                <button action="submit" form="form1" class="shadow-btn reg-btn" name="submit">REGISTER</button>
             </form>
             <a class="forgot"href="">I forgot my password</a>
         </div>
+        <?php
+        if (isset($_GET["error"])) {
+            if ($_GET["error"] == "emptyinput") {
+                echo "<p>fill</p>";
+            }
+        }
+        ?>
     </div>
     <script src="js/dragndrop.js"></script>
 </body>

@@ -1063,6 +1063,10 @@ button:focus {
     height: 40px;
 }
 
+.reg-btn {
+    max-width: 90%;
+}
+
 .drop-box h2 {
     font-size: 1rem;
     font-family: Josefin sans;
