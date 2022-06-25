@@ -55,7 +55,7 @@
                 echo "<p style='font-family:Josefin Sans; margin: top 20px;'>Please use a valid email</p>";
             }
             elseif ($_GET["error"] == "takenuid") {
-                echo "<p style='font-family:Josefin Sans; margin: 20px 20px;'>Username/email is already taken</p>";
+                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Username/email is already taken</p>";
             }
         }
         ?>
