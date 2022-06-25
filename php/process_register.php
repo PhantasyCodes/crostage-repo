@@ -14,19 +14,34 @@ if (isset($_POST["submit"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $filename = $_FILES['file']['name'];
-
     $location = "../images/".$filename;
 
-    if( move_uploaded_file($_FILES['file']['tmp_name'], $location)) {
-        echo 'File uploaded succesfully';
+    require_once 'functions.php';
+
+    if(emptyInputSignup($first_name, $last_name, $username, $number, $email, $password) !== false) {
+        header("location: ../register.php?error=emptyinput");
+        exit();
     }
 
-    $sql = "INSERT INTO users (first_name, last_name, username, profile_picture, phone_no, email, password, type) 
-    VALUES ('$first_name', '$last_name', '$username', '$filename', '$number', '$email', '$password', 'user')";
+    if(invalidUid($username) !== false) {
+        header("location: ../register.php?error=invaliduid");
+        exit();
+    }
 
-    mysqli_query($connection, $sql);
+    if(invalidEmail($email) !== false) {
+        header("location: ../register.php?error=invalidemail");
+        exit();
+    }
+
+    if(takenUid($connection, $username, $email) !== false) {
+        header("location: ../register.php?error=takenuid");
+        exit();
+    }
+
+    createUser($connection, $first_name, $last_name, $username, $number, $email, $password, $filename, $location);
 }
 
 else {
     header("location: ../index.php");
+    exit();
 }
