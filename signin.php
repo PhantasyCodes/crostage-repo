@@ -23,8 +23,8 @@
             <form class="forms" action="php/process_login.php">
                 <input class="inputs" type="text" placeholder="Email Address/Username" name="username">
                 <input class="inputs" type="password" placeholder="Password" name="password">
+                <button action="submit" class="shadow-btn reg-btn" name="submit" class="shadow-btn">SIGN IN</button>
             </form>
-            <a href=""><button class="shadow-btn">SIGN IN</button></a>
             <a class="forgot"href="">I forgot my password</a>
             <?php
             if (isset($_GET["error"])) {
