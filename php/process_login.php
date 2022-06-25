@@ -4,6 +4,7 @@ if (isset($_POST["submit"])) {
     $username = $_POST["username"];
     $pwd = $_POST["password"];
 
+    require_once 'connect.php';
     require_once 'functions.php';
 
     if(emptyInputSignin($username, $pwd) !== false) {
