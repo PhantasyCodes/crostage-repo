@@ -46,13 +46,13 @@
             <?php
         if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyinput") {
-                echo "<p style='font-family:Josefin Sans; margin: top 20px;'>Make sure to fill all fields</p>";
+                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Make sure to fill all fields</p>";
             }
             elseif ($_GET["error"] == "invaliduid") {
-                echo "<p style='font-family:Josefin Sans; margin: top 20px;'>Please use a valid username</p>";
+                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Please use a valid username</p>";
             }
             elseif ($_GET["error"] == "invalidemail") {
-                echo "<p style='font-family:Josefin Sans; margin: top 20px;'>Please use a valid email</p>";
+                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Please use a valid email</p>";
             }
             elseif ($_GET["error"] == "takenuid") {
                 echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Username/email is already taken</p>";
