@@ -77,3 +77,38 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
     exit();
 
 }
+
+function emptyInputSignin($username, $pwd) {
+    $result;
+    if (empty($username) || empty($pwd)) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+function loginUser ($connection, $username, $pwd) {
+    $uidExists = takenUid($connection, $username, $username);
+
+    if ($uidExists === false) {
+        header("location: ../signin.php?error=invalidusername");
+        exit();
+    }
+
+    $pwdHashed = $uidExists["password"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+
+    if ($checkPwd === false) {
+        header("location: ../signin.php?error=wrongpassword");
+        exit();
+    }
+    else if ($checkPwd === true) {
+        session_start();
+        $_SESSION["userid"] = $uidExists["user_id"];
+        $_SESSION["useruid"] = $uidExists["username"];
+        header("location: ../index.php");
+        exit();
+    }
+}

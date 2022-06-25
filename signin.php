@@ -20,12 +20,28 @@
         <div class="hero-right sign-in-right">
             <h2>Heey!</h2>
             <h3>Welcome back! Sign in here:</h3>
-            <form class="forms" action="/action_page.php">
-                <input class="inputs" type="text" placeholder="Email Address" name="">
-                <input class="inputs" type="text" placeholder="Password" name="">
+            <form class="forms" action="php/process_login.php">
+                <input class="inputs" type="text" placeholder="Email Address/Username" name="username">
+                <input class="inputs" type="password" placeholder="Password" name="password">
             </form>
             <a href=""><button class="shadow-btn">SIGN IN</button></a>
             <a class="forgot"href="">I forgot my password</a>
+            <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyinput") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Make sure to fill all fields</p>";
+                }
+                elseif ($_GET["error"] == "invalidusername") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Username/email does not exist</p>";
+                }
+                elseif ($_GET["error"] == "wrongpassword") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Incorrect password</p>";
+                }
+                elseif ($_GET["error"] == "takenuid") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Username/email is already taken</p>";
+                }
+            }
+            ?>
         </div>
     </div>
 </body>

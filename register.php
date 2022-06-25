@@ -35,7 +35,7 @@
                 <input class="inputs" type="text" placeholder="Username" name="username">
                 <input class="inputs" type="text" placeholder="Phone No" name="number">
                 <input class="inputs" type="text" placeholder="Email Address" name="email">
-                <input class="inputs" type="text" placeholder="Password" name="password">
+                <input class="inputs" type="password" placeholder="Password" name="password">
                 <div class="drop-box drop-box2">
                     <h2 class="drop-box-prompt">Click to upload profile picture</h2>
                     <input style="display:none" class="drop-zone-input" name="file" type="file">
@@ -44,21 +44,21 @@
             </form>
             <a class="forgot"href="">I forgot my password</a>
             <?php
-        if (isset($_GET["error"])) {
-            if ($_GET["error"] == "emptyinput") {
-                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Make sure to fill all fields</p>";
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyinput") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Make sure to fill all fields</p>";
+                }
+                elseif ($_GET["error"] == "invaliduid") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Please use a valid username</p>";
+                }
+                elseif ($_GET["error"] == "invalidemail") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Please use a valid email</p>";
+                }
+                elseif ($_GET["error"] == "takenuid") {
+                    echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>*Username/email is already taken</p>";
+                }
             }
-            elseif ($_GET["error"] == "invaliduid") {
-                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Please use a valid username</p>";
-            }
-            elseif ($_GET["error"] == "invalidemail") {
-                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Please use a valid email</p>";
-            }
-            elseif ($_GET["error"] == "takenuid") {
-                echo "<p style='font-family:Josefin Sans; padding: 20px 0px;'>Username/email is already taken</p>";
-            }
-        }
-        ?>
+            ?>
         </div>
     </div>
     <script src="js/dragndrop.js"></script>

@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,7 @@
     <div id="anim" class="loader">
     </div>
     <?php
-    include_once 'header.php';
+        include_once 'header.php';
     ?>
     <div id="butter">
         <div class="hero">
