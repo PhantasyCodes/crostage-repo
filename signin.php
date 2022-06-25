@@ -20,10 +20,10 @@
         <div class="hero-right sign-in-right">
             <h2>Heey!</h2>
             <h3>Welcome back! Sign in here:</h3>
-            <form class="forms" action="php/process_login.php">
+            <form class="forms" action="php/process_login.php" method="post" enctype="multipart/form-data">
                 <input class="inputs" type="text" placeholder="Email Address/Username" name="username">
                 <input class="inputs" type="password" placeholder="Password" name="password">
-                <button action="submit" class="shadow-btn reg-btn" name="submit" class="shadow-btn">SIGN IN</button>
+                <button action="submit" class="shadow-btn reg-btn" name="submit" class="shadow-btn reg-btn">SIGN IN</button>
             </form>
             <a class="forgot"href="">I forgot my password</a>
             <?php
