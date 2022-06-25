@@ -13,10 +13,9 @@ function emptyInputSignup($first_name, $last_name, $username, $number, $email, $
 
 function invalidUid($username) {
     $result;
-    if (!preg_match("/^[a-zA-Z0-9]*$/"), $username) {
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         $result = true;
     }
-
     else {
         $result = false;
     }
