@@ -40,7 +40,6 @@ function takenUid($connection, $username, $email) {
     $query = mysqli_stmt_init($connection);
     if (!mysqli_stmt_prepare($query, $sql)) {
         // header("location: ../register.php?error=queryfailed");
-        print_r($query);
         exit();
     }
 
@@ -90,7 +89,7 @@ function emptyInputSignin($username, $pwd) {
     return $result;
 }
 
-function loginUser ($connection, $username, $pwd) {
+function loginUser($connection, $username, $pwd) {
     $uidExists = takenUid($connection, $username, $username);
 
     if ($uidExists === false) {
