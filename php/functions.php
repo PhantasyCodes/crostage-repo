@@ -39,7 +39,7 @@ function takenUid($connection, $username, $email) {
     $sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
     $query = mysqli_stmt_init($connection);
     if (!mysqli_stmt_prepare($query, $sql)) {
-        // header("location: ../register.php?error=queryfailed");
+        header("location: ../register.php?error=queryfailed");
         exit();
     }
 
