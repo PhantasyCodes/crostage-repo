@@ -59,8 +59,6 @@ function takenUid($connection, $username, $email) {
 }
 
 function createUser($connection, $first_name, $last_name, $username, $number, $email, $password, $filename, $location) {
-    echo "$password";
-    return;
     move_uploaded_file($_FILES['file']['tmp_name'], $location);
     $sql = "INSERT INTO users (first_name, last_name, username, profile_picture, phone_no, email, password, type) VALUES (?, ?, ?, ?, ?, ?, ?, 'user')";
     $query = mysqli_stmt_init($connection);
@@ -70,6 +68,11 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
     }
 
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+
+    if (password_verify($password, $hashedPwd)) {
+        echo "nice";
+        return;
+    }
 
     mysqli_stmt_bind_param($query, "sssssss", $first_name, $last_name, $username, $filename, $number, $email, $hashedPwd);
     mysqli_stmt_execute($query);
