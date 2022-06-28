@@ -74,7 +74,6 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
     mysqli_stmt_close($query);
     header("location: ../signin.php?error=none");
     exit();
-
 }
 
 function emptyInputSignin($username, $pwd) {
@@ -89,6 +88,8 @@ function emptyInputSignin($username, $pwd) {
 }
 
 function loginUser($connection, $username, $pwd) {
+    echo "$username "."$pwd <br>";
+    return;
     $uidExists = takenUid($connection, $username, $username);
 
     if ($uidExists === false) {
