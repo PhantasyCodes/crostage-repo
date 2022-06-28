@@ -35,7 +35,6 @@ function invalidEmail($email) {
 }
 
 function takenUid($connection, $username, $email) {
-    $result;
     $sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
     $query = mysqli_stmt_init($connection);
     if (!mysqli_stmt_prepare($query, $sql)) {
@@ -91,10 +90,9 @@ function emptyInputSignin($username, $pwd) {
 
 function loginUser($connection, $username, $pwd) {
     $uidExists = takenUid($connection, $username, $username);
-    print_r($uidExists);
 
     if ($uidExists === false) {
-        // header("location: ../signin.php?error=invalidusername");
+        header("location: ../signin.php?error=invalidusername");
         exit();
     }
     $pwdHashed = $uidExists["password"];
