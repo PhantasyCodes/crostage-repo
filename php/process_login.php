@@ -15,7 +15,10 @@ if (isset($_POST["submit"])) {
     loginUser($connection, $username, $pwd);
 }
 
+
 else {
     header("location: ../signin.php");
     exit();
 }
+
+header("location: functions.php");

@@ -93,8 +93,7 @@ function loginUser($connection, $username, $pwd) {
     $uidExists = takenUid($connection, $username, $username);
 
     if ($uidExists === false) {
-        // header("location: ../signin.php?error=invalidusername");
-        print_r($uidExists);
+        header("location: ../signin.php?error=invalidusername");
         exit();
     }
     $pwdHashed = $uidExists["password"];
