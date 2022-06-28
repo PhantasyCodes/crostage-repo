@@ -91,9 +91,9 @@ function emptyInputSignin($username, $pwd) {
 
 function loginUser($connection, $username, $pwd) {
     $uidExists = takenUid($connection, $username, $username);
+    echo $uidExists;
 
     if ($uidExists === false) {
-        print_r($uidExists);
         // header("location: ../signin.php?error=invalidusername");
         exit();
     }
