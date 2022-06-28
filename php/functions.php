@@ -95,7 +95,6 @@ function loginUser($connection, $username, $pwd) {
         exit();
     }
     $pwdHashed = $uidExists["password"];
-    $checkPwd = password_verify($pwd, $pwdHashed);
 
     if (!password_verify($pwd, $pwdHashed)) {
         header("location: ../signin.php?error=wrongpassword");
