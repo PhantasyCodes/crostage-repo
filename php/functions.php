@@ -59,6 +59,8 @@ function takenUid($connection, $username, $email) {
 }
 
 function createUser($connection, $first_name, $last_name, $username, $number, $email, $password, $filename, $location) {
+    echo "$password";
+    return;
     move_uploaded_file($_FILES['file']['tmp_name'], $location);
     $sql = "INSERT INTO users (first_name, last_name, username, profile_picture, phone_no, email, password, type) VALUES (?, ?, ?, ?, ?, ?, ?, 'user')";
     $query = mysqli_stmt_init($connection);
