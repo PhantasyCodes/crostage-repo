@@ -98,8 +98,6 @@ function loginUser($connection, $username, $pwd) {
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
-        echo "$pwd" . "$pwdHashed" . "$checkPwd";
-        return;
         header("location: ../signin.php?error=wrongpassword");
         exit();
     }
