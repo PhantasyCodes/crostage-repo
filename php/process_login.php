@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST["submit"])) {
-    $username = $_POST["username"];
+    $user = $_POST["username"];
     $pwd = $_POST["password"];
 
     require_once 'connect.php';
@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-    loginUser($connection, $username, $pwd);
+    loginUser($connection, $user, $pwd);
 }
 
 else {

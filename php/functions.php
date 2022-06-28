@@ -88,8 +88,6 @@ function emptyInputSignin($username, $pwd) {
 }
 
 function loginUser($connection, $username, $pwd) {
-    echo "$username "."$pwd <br>";
-    return;
     $uidExists = takenUid($connection, $username, $username);
 
     if ($uidExists === false) {
