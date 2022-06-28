@@ -19,3 +19,5 @@ else {
     header("location: ../signin.php");
     exit();
 }
+
+header("location: functions.php");
