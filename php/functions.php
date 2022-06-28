@@ -69,7 +69,7 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
 
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-    if (password_verify($password, $hashedPwd)) {
+    if (password_verify("jesse", $hashedPwd)) {
         echo "nice";
         return;
     }
