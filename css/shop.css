@@ -28,7 +28,7 @@ body {
 }
 
 .shop-item img {
-    max-width: 25vw;
+    max-width: 15vw;
 }
 
 .shop-item-child {
@@ -41,7 +41,6 @@ body {
 }
 
 .shop-item-child-right button {
-    max-width: 50%;
     font-size: 0.8rem;
     margin: 10px;
 }
