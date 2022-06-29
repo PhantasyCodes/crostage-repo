@@ -42,4 +42,6 @@ body {
 
 .shop-item-child-right button {
     max-width: 50%;
+    font-size: 0.8rem;
+    margin: 10px;
 }
