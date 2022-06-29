@@ -1,0 +1,25 @@
+.shop-container {
+    width: 100vw;
+    display: flex;
+}
+
+.shop-sidebar {
+    width: 30vw;
+    border-right: solid black 1px;
+}
+
+.shop-content {
+    width: 70vw;
+    display: flex;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.shop-item img {
+    max-width: 20vw;
+}
