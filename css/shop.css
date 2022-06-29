@@ -9,12 +9,12 @@ body {
 }
 
 .shop-sidebar {
-    width: 30vw;
+    width: 20vw;
     border-right: solid black 1px;
 }
 
 .shop-content {
-    width: 70vw;
+    width: 80vw;
     display: flex;
     flex-flow: row wrap;
     padding-left: 20px;
@@ -24,8 +24,9 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+    min-width: 20vw;
 }
 
 .shop-item img {
-    max-width: 20vw;
+    max-width: 15vw;
 }
