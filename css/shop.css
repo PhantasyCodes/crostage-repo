@@ -1,6 +1,7 @@
 .shop-container {
     width: 100vw;
     display: flex;
+    margin-top: 10vh;
 }
 
 .shop-sidebar {
