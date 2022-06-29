@@ -12,12 +12,12 @@
 .shop-content {
     width: 70vw;
     display: flex;
+    flex-flow: row wrap;
 }
 
 .shop-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-right: 20px;
 }
 
