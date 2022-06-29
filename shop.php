@@ -33,7 +33,7 @@
                 while($row = mysqli_fetch_assoc($result)) {
                     $id = $row['product_id'];
                     echo "<div class='shop-item'>";
-                    echo "<img class='admin-img' src='images/" . $row['product_img'] . ">";
+                    echo "<img class='admin-img' src='images/" . $row['product_img'] . "'>";
                     echo "<h1>" . $row["product_name"] . "</h1>";
                     echo "<h2>" . $row["product_price"] . "</h2>";
                     echo "</div>";
