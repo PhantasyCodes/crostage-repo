@@ -1,3 +1,7 @@
+body {
+    overflow-y: scroll;
+}
+
 .shop-container {
     width: 100vw;
     display: flex;
@@ -13,6 +17,7 @@
     width: 70vw;
     display: flex;
     flex-flow: row wrap;
+    padding-left: 20px;
 }
 
 .shop-item {
