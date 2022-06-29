@@ -24,7 +24,7 @@
             <?php
             require("php/connect.php");
 
-            $sql = "SELECT product_img, product_id, product_name, product_price FROM products";
+            $sql = "SELECT product_img, product_id, product_name, product_type, product_price FROM products";
 
             $result = mysqli_query($connection, $sql);
 
@@ -35,6 +35,7 @@
                     echo "<div class='shop-item'>";
                     echo "<img class='admin-img' src='images/" . $row['product_img'] . "'>";
                     echo "<h1 style='font-weight:400;'>" . $row["product_name"] . "</h1>";
+                    echo "<h2 style='font-weight:300;'>" . $row["product_type"] . "</h2>";
                     echo "<h2 style='font-weight:300;'>" . $row["product_price"] . "</h2>";
                     echo "</div>";
                 }
