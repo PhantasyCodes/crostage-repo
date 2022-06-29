@@ -35,7 +35,8 @@
                     echo "<div class='shop-item' data-href='http://www.crostage.co.ke/admin/product_edit.php?id=$id'>
                             <img class='admin-img' src='images/" . $row['product_img'] . ">
                             <h1>" . $row["product_name"] . "</h1>
-                            <h2>" . $row["product_price"] . "</h2>";
+                            <h2>" . $row["product_price"] . "</h2>
+                        </div>";
                 }
             } else {
                 echo "0 results";
