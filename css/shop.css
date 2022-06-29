@@ -23,10 +23,14 @@ body {
 .shop-item {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 30px;
     min-width: 20vw;
 }
 
 .shop-item img {
     max-width: 15vw;
+}
+
+.shop-item-child {
+    display: flex;
 }

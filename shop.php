@@ -34,9 +34,17 @@
                     $id = $row['product_id'];
                     echo "<div class='shop-item'>";
                     echo "<img class='admin-img' src='images/" . $row['product_img'] . "'>";
+                    echo "<div class='shop-item-child'>";
+                    echo "<div class='shop-item-child-left'>";
                     echo "<h1 style='font-weight:400;'>" . $row["product_name"] . "</h1>";
                     echo "<h2 style='font-weight:300;'>" . $row["product_type"] . "</h2>";
                     echo "<h2 style='font-weight:300;'>" . $row["product_price"] . "</h2>";
+                    echo "</div>";
+                    echo "<div class='shop-item-child-right'>";
+                    echo "<button class='shadow-btn'>VIEW</button>";
+                    echo "<button class='shadow-btn'>ADD TO CART</button>";
+                    echo "</div>";
+                    echo "</div>";
                     echo "</div>";
                 }
             } else {
