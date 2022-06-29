@@ -34,3 +34,12 @@ body {
 .shop-item-child {
     display: flex;
 }
+
+.shop-item-child-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-item-child-right button {
+    max-width: 50%;
+}
