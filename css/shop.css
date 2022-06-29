@@ -43,4 +43,5 @@ body {
 .shop-item-child-right button {
     font-size: 0.8rem;
     margin: 10px;
+    box-shadow: 5px 5px #888888;
 }
