@@ -17,14 +17,13 @@ body {
     width: 80vw;
     display: flex;
     flex-flow: row wrap;
-    padding: 0px 20px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .shop-item {
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin: 20px;
     min-width: 20vw;
 }
 
