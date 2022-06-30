@@ -63,9 +63,8 @@
 
                 mysqli_query($connection, $sql2);
 
-                foreach ($_POST as $k=>$v) {
-                    unset($_POST[$k]);
-                }
+                unset($_POST["button"]);
+                
             }
 
             mysqli_close($conn);
