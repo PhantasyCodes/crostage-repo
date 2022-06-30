@@ -27,7 +27,7 @@
             <?php
             require("php/connect.php");
 
-            $sql = "SELECT product_img, product_id, product_name, product_type, product_price FROM products";
+            $sql = "SELECT products.product_id, products.product_img, products.product_name, products.product_type, products.product_price, categories.category_name FROM products INNER JOIN category_item ON products.product_id = category_item.product_id INNER JOIN categories ON categories.category_id = category_item.category_id;";
 
             $result = mysqli_query($connection, $sql);
 
@@ -66,10 +66,6 @@
             }
 
             unset($_POST["button"]);
-
-            if(isset($_POST["button"])) {
-                echo "caught";
-            }
 
             mysqli_close($conn);
             ?>
