@@ -59,7 +59,7 @@
             $userId = $_SESSION["userid"];
             
             if(isset($_POST["button"])) {
-                $sql2 = "INSERT INTO category_items (cart_id, product_id, quantity, is_active) VALUES ('$userId', '$id', '1', 'yes')";
+                $sql2 = "INSERT INTO cart_items (cart_id, product_id, quantity, is_active) VALUES ('$userId', '$id', '1', 'yes')";
 
                 mysqli_query($connection, $sql2);
             }
