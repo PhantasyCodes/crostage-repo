@@ -67,9 +67,9 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
         exit();
     }
 
-    $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+    // $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($query, "sssssss", $first_name, $last_name, $username, $filename, $number, $email, $hashedPwd);
+    mysqli_stmt_bind_param($query, "sssssss", $first_name, $last_name, $username, $filename, $number, $email, $password);
     mysqli_stmt_execute($query);
     mysqli_stmt_close($query);
     header("location: ../signin.php?error=none");
@@ -94,16 +94,13 @@ function loginUser($connection, $username, $pwd) {
         header("location: ../signin.php?error=invalidusername");
         exit();
     }
-    $pwdHashed = $uidExists["password"];
-    $checkPwd = password_verify($pwd, $pwdHashed);
+    $pwdRight = $uidExists["password"];
 
-    if ($checkPwd === false) {
-        echo "$pwd  " . "$pwdHashed";
-        return;
+    if ($pwd !== $pwdRight) {
         header("location: ../signin.php?error=wrongpassword");
         exit();
     }
-    else if ($checkPwd === true) {
+    else if ($pwd === $pwdRight) {
         session_start();
         $_SESSION["userid"] = $uidExists["user_id"];
         $_SESSION["useruid"] = $uidExists["username"];
