@@ -16,7 +16,7 @@
             <?php
                 if (isset($_SESSION["useruid"])) {
                     echo "<a href='php/logout.php' class='signin-link' href='signin.php'>Profile page</a>";
-                    echo "<a href=''><i class='fa fa-shopping-bag' aria-hidden='true'></i></a>";
+                    echo "<a href='cart.php'><i class='fa fa-shopping-bag' aria-hidden='true'></i></a>";
                 }
                 else {
                     echo "<a class='signin-link' href='signin.php'>SIGN IN</a>";
