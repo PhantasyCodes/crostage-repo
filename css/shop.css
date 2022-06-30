@@ -11,6 +11,7 @@ body {
 .shop-sidebar {
     width: 20vw;
     border-right: solid black 1px;
+    padding-left: 30px;
 }
 
 .shop-content {
@@ -44,4 +45,13 @@ body {
     font-size: 0.8rem;
     margin: 10px;
     box-shadow: 5px 5px #888888;
+}
+
+.sidebar-categories label {
+    font-family: Josefin Sans;
+    font-size: 1rem;
+}
+
+.sidebar-heading h1 {
+    margin-bottom: 20px;
 }

@@ -21,29 +21,33 @@
     ?>
     <div class="shop-container">
         <div class="shop-sidebar">
-            <?php
-                require("php/connect.php");
+            <div class="sidebar-heading">
+                <h1>Filter by:</h1>
+            </div>
+            <div class="sidebar-categories">
+                <?php
+                    require("php/connect.php");
 
-                $sql = "SELECT products.product_id, products.product_img, products.product_name, products.product_type, products.product_price, categories.category_name FROM products INNER JOIN category_item ON products.product_id = category_item.product_id INNER JOIN categories ON categories.category_id = category_item.category_id;";
+                    $sql = "SELECT products.product_id, products.product_img, products.product_name, products.product_type, products.product_price, categories.category_name FROM products INNER JOIN category_item ON products.product_id = category_item.product_id INNER JOIN categories ON categories.category_id = category_item.category_id;";
 
-                $result = mysqli_query($connection, $sql);
+                    $result = mysqli_query($connection, $sql);
 
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                        $category = $row['category_name'];
-                        echo "<form method='post'>";
-                        echo "<input type='checkbox' name='$category' value='$category'>";
-                        echo "<label for='$category'>$category<label><br>";
-                        echo "</form>";
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $category = $row['category_name'];
+                            echo "<form method='post'>";
+                            echo "<input type='checkbox' name='$category' value='$category'>";
+                            echo "<label for='$category'>$category<label><br>";
+                            echo "</form>";
+                        }
+                    } else {
+                        echo "0 results";
                     }
-                } else {
-                    echo "0 results";
-                }
 
-                mysqli_close($conn);
-            ?>
-
+                    mysqli_close($conn);
+                ?>
+            </div>
         </div>
         <div class="shop-content">
             <?php
