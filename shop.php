@@ -57,7 +57,7 @@
             }
             
             if(isset($_POST["button"])) {
-                echo "This is Button1 that is selected";
+                echo $_POST["button"];
             }
 
             mysqli_close($conn);
