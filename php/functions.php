@@ -104,7 +104,7 @@ function loginUser($connection, $username, $pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["user_id"];
         $_SESSION["useruid"] = $uidExists["username"];
-        header("location: ../index.php");
+        header("location: ../shop.php");
         exit();
     }
 }
