@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <nav class="navbar">
     <div class="container">
         <div class="search-bar">
@@ -12,7 +15,7 @@
         <div class="nav-links">
             <?php
                 if (isset($_SESSION["useruid"])) {
-                    echo "<a href='profile.php' class='signin-link' href='signin.php'>Profile page</a>";
+                    echo "<a href='php/logout.php' class='signin-link' href='signin.php'>Profile page</a>";
                     echo "<a href=''><i class='fa fa-shopping-bag' aria-hidden='true'></i></a>";
                 }
                 else {
