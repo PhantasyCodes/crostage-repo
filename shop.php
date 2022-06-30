@@ -46,7 +46,7 @@
                     echo "<div class='shop-item-child-right'>";
                     echo "<button class='shadow-btn'>VIEW</button>";
                     echo "<form method='post'>";
-                    echo "<button action='submit' class='shadow-btn' name='button'>ADD TO CART</button>";
+                    echo "<button action='submit' class='shadow-btn' name='" . $id . "'>ADD TO CART</button>";
                     echo "</form>";
                     echo "</div>";
                     echo "</div>";
@@ -56,7 +56,7 @@
                 echo "0 results";
             }
             
-            if(isset($_POST['button'])) {
+            if(isset($_POST[$id])) {
                 echo "This is Button1 that is selected";
             }
 
