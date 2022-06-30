@@ -37,8 +37,8 @@
                         while($row = mysqli_fetch_assoc($result)) {
                             $category = $row['category_name'];
                             echo "<form id='category-form' method='post'>";
-                            echo "<input type='checkbox' name='$category' value='$category'>";
-                            echo "<label for='$category'>$category<label><br>";
+                            echo "<input type='checkbox' name='choice' value='$category'>";
+                            echo "<label for='choice'>$category<label><br>";
                             echo "</form>";
                         }
                     } else {
@@ -47,7 +47,7 @@
 
                     echo "<button action='submit' form='category-form' class='shadow-btn'>SUBMIT</button>";
 
-                    if(isset($_POST["$category"])) {
+                    if(isset($_POST["choice"])) {
                         $sql = "SELECT products.product_id, categories.category_name FROM products INNER JOIN category_item ON products.product_id = category_item.product_id INNER JOIN categories ON categories.category_id = category_item.category_id  WHERE categories.category_name = '$category';";
                         
                         header("location: shop.php?category=$category");
