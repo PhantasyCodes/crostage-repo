@@ -62,6 +62,10 @@
                 $sql2 = "INSERT INTO cart_items (cart_id, product_id, quantity, is_active) VALUES ('$userId', '$id', '1', 'yes')";
 
                 mysqli_query($connection, $sql2);
+
+                foreach ($_POST as $k=>$v) {
+                    unset($_POST[$k]);
+                }
             }
 
             mysqli_close($conn);
