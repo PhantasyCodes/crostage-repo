@@ -1,4 +1,5 @@
 <?php
+require("php/connect.php");
 
 if(isset($_POST["choice"])) {
     $choice = $_POST["choice"];
