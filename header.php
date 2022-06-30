@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <nav class="navbar">
     <div class="container">
         <div class="search-bar">
