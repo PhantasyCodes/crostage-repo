@@ -28,7 +28,7 @@
                 <?php
                     require("php/connect.php");
 
-                    $sql = "SELECT products.product_id, products.product_img, products.product_name, products.product_type, products.product_price, categories.category_name FROM products INNER JOIN category_item ON products.product_id = category_item.product_id INNER JOIN categories ON categories.category_id = category_item.category_id;";
+                    $sql = "SELECT category_name FROM categories";
 
                     $result = mysqli_query($connection, $sql);
 
