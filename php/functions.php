@@ -98,7 +98,7 @@ function loginUser($connection, $username, $pwd) {
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
-        echo gettype($pwd) . gettype($pwdHashed);
+        echo "$pwd  " . "$pwdHashed";
         return;
         header("location: ../signin.php?error=wrongpassword");
         exit();
