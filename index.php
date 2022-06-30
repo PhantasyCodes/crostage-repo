@@ -15,7 +15,7 @@
     <div id="anim" class="loader">
     </div>
     <?php
-        include_once 'header.php';
+        include 'header.php';
     ?>
     <div id="butter">
         <div class="hero">

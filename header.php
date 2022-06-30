@@ -1,7 +1,3 @@
-<?php
-    session_start();
-    echo "p";
-?>
 <nav class="navbar">
     <div class="container">
         <div class="search-bar">

@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php
-    include_once 'header.php';
+    include 'header.php';
     ?>
     <div class="shop-container">
         <div class="shop-sidebar">
