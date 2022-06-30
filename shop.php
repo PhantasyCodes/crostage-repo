@@ -36,7 +36,7 @@
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
                             $category = $row['category_name'];
-                            echo "<form id='category-form' method='post'>";
+                            echo "<form action='php/shop.categories.php' id='category-form' method='post'>";
                             echo "<input type='checkbox' name='choice' value='$category'>";
                             echo "<label for='choice'>$category<label><br>";
                             echo "</form>";
@@ -47,16 +47,10 @@
 
                     echo "<button action='submit' form='category-form' class='shadow-btn'>SUBMIT</button>";
 
-                    if(isset($_POST["choice"])) {
-                        $choice = $_POST["choice"];
-                        $sql = "SELECT products.product_id, categories.category_name FROM products INNER JOIN category_item ON products.product_id = category_item.product_id INNER JOIN categories ON categories.category_id = category_item.category_id  WHERE categories.category_name = '$category';";
-                        
-                        header("location: shop.php?category='$choice'");
-                        echo "nice";
-                        mysqli_query($connection, $sql2);
-                    }
-
                     mysqli_close($conn);
+                    if (isset($_GET["category"])) {
+                        $choice = $_GET["category"];
+                    }
                 ?>
 
             </div>
