@@ -27,7 +27,6 @@
     font-weight: 300;
 }
 
-.quantity {
-    width: 100px;
-    height: 50px;
+.quantity-box{
+    display: flex;
 }
