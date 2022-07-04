@@ -29,4 +29,41 @@
 
 .quantity-box{
     display: flex;
+    background-color: white;
+    border-radius: 45px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Josefin Sans;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-btn {
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.increment {
+    padding: 15px 5px 15px 25px;
+    border-radius: 45px 0 0 45px;
+}
+
+.decrement {
+    padding: 15px 25px 15px 5px;
+    border-radius: 0 45px 45px 0;
 }
