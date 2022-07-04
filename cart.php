@@ -21,7 +21,7 @@
     ?>
     <h1 class="cart-heading">Your cart</h1>
     <div class="cart">
-        <form>
+        <form action="">
             <?php
                 require("php/connect.php");
 
@@ -43,7 +43,7 @@
                         echo "<div class='quantity-box'>";
                         echo "<button id='decrement' class='quantity-btn decrement' onclick='stepper(this)'> - </button>";
                         echo "<input type='number' id='my-input' class='quantity' name='quantity' min='1' max='5' step='1' value='1' readonly>";
-                        echo "<button id='increment' class='quantity-btn increment' onclick='stepper(this)'> + </button>";
+                        echo "<button id='increment' class='quantity-btn increment' type='button' onclick='stepper(this)'> + </button>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
