@@ -37,6 +37,10 @@
                         $productImage = $row['product_img'];
                         echo "<div class='cart-item'>";
                         echo "<img src='images/" . $row['product_img'] . "'>";
+                        echo "<div class='cart-item-text'>";
+                        echo "<h2>" . $row['product_name'] . "</h2>";
+                        echo "<h3>Ksh" . $row['product_price'] . "</h3>";
+                        echo "</div>";
                         echo "</div>";
                     }
                 } else {

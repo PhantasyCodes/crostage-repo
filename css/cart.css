@@ -3,3 +3,15 @@
     margin-left: 50px;
     font-size: 3rem;
 }
+
+.cart-item {
+    display: flex;
+    padding: 20px 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.cart-item img {
+    max-width: 100px;
+    margin-right: 30px;
+}
