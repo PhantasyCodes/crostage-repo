@@ -41,7 +41,7 @@
                         echo "<h2>" . $row['product_name'] . "</h2>";
                         echo "<h3>Ksh " . $row['product_price'] . "</h3>";
                         echo "<div class='quantity-box'>";
-                        echo "<button id='decrement' class='quantity-btn decrement' onclick='stepper(this)'> - </button>";
+                        echo "<button id='decrement' class='quantity-btn decrement' type='button' onclick='stepper(this)'> - </button>";
                         echo "<input type='number' id='my-input' class='quantity' name='quantity' min='1' max='5' step='1' value='1' readonly>";
                         echo "<button id='increment' class='quantity-btn increment' type='button' onclick='stepper(this)'> + </button>";
                         echo "</div>";

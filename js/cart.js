@@ -1,4 +1,4 @@
-const myInput = document.getElementsById("my-input");
+const myInput = document.getElementById("my-input");
 function stepper(btn) {
     let id = btn.getAttribute("id");
     let min = myInput.getAttribute("min");
