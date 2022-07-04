@@ -21,7 +21,7 @@
     ?>
     <h1 class="cart-heading">Your cart</h1>
     <div class="cart">
-        <form action="">
+        <form>
             <?php
                 require("php/connect.php");
 
