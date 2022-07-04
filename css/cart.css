@@ -58,12 +58,12 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
-.increment {
+.decrement {
     padding: 15px 5px 15px 25px;
     border-radius: 45px 0 0 45px;
 }
 
-.decrement {
+.increment {
     padding: 15px 25px 15px 5px;
     border-radius: 0 45px 45px 0;
 }
