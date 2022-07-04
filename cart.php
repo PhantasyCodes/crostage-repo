@@ -40,7 +40,7 @@
                         echo "<div class='cart-item-text'>";
                         echo "<h2>" . $row['product_name'] . "</h2>";
                         echo "<h3>Ksh " . $row['product_price'] . "</h3>";
-                        echo "<input type='number' class='quantity' name='quantity' min='1' max='5'>";
+                        echo "<input type='number' class='quantity' name='quantity' placeholder='1' min='1' max='5'>";
                         echo "</div>";
                         echo "</div>";
                     }
