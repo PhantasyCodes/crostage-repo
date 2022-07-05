@@ -1,7 +1,7 @@
 
-function stepper(btn, id) {
+function stepper(btn, classId) {
 
-    const myInput = document.getElementById("my-input-"+id);
+    const myInput = document.getElementById("my-input-"+classId);
     let id = btn.getAttribute("id");
     let min = myInput.getAttribute("min");
     let max = myInput.getAttribute("max");
