@@ -25,14 +25,16 @@
 
 .cart-item h3 {
     font-weight: 300;
+    font-family: Josefin Sans;
 }
 
 .quantity-box{
     display: flex;
-    background-color: white;
+    background-color: #bc6c25;
     border-radius: 45px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-    max-width: 150px;
+    width: 150px;
+    justify-content: center;
 }
 
 input[type="number"] {
@@ -41,8 +43,8 @@ input[type="number"] {
     font-size: 1.5rem;
     font-family: Josefin Sans;
     border: none;
-    background-color: white;
-    color: black;
+    background-color: #bc6c25;
+    color: white;
 }
 
 input::-webkit-outer-spin-button,
@@ -52,8 +54,8 @@ input::-webkit-inner-spin-button {
 }
 
 .quantity-btn {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #bc6c25;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
