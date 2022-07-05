@@ -92,6 +92,6 @@ input::-webkit-inner-spin-button {
     border: 1px solid black;
     position: absolute;
     right: 20px;
-    top: 30px;
+    top: 20vh;
 }
 
