@@ -49,7 +49,7 @@
                         echo "</div>";
                     }
                 } else {
-                    echo "There are 0 itmems in your cart";
+                    echo "There are 0 items in your cart";
                 }
             ?>
         </form>
