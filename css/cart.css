@@ -9,7 +9,7 @@
     padding: 20px 0px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    max-width: 75vw;
+    max-width: 60vw;
     margin-bottom: 20px;
     margin-left: 20px;
 }
@@ -31,7 +31,7 @@
     margin-bottom: 20px;
 }
 
-.quantity-box{
+.quantity-box {
     display: flex;
     background-color: #bc6c25;
     border-radius: 45px;
@@ -85,3 +85,12 @@ input::-webkit-inner-spin-button {
     margin-top: 20px;
     font-size: 1.2rem;
 }
+
+.subtotal {
+    height: 20vh;
+    width: 20vw;
+    border: 1px solid black;
+    position: absolute;
+    right: 20px;
+}
+

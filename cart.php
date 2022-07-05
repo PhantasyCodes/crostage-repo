@@ -57,6 +57,9 @@
                 }
             ?>
         </form>
+        <div class="subtotal">
+            
+        </div>
     </div>
     <script src="js/cart.js"></script>
 </body>
