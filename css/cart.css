@@ -66,6 +66,7 @@ input::-webkit-inner-spin-button {
     font-size: 1.5rem;
     cursor: pointer;
     height: 50px;
+    margin-bottom: 20px;
 }
 
 .decrement {
@@ -76,4 +77,9 @@ input::-webkit-inner-spin-button {
 .increment {
     padding: 15px 25px 15px 5px;
     border-radius: 0 45px 45px 0;
+}
+
+.remove {
+    text-decoration: underline;
+    font-family: Josefin Sans;
 }
