@@ -46,7 +46,7 @@
                         echo "<div class='quantity-box'>";
                         echo "<button id='decrement' class='quantity-btn decrement' type='button' onclick='stepper(this)'> - </button>";
                         echo "<input type='number' id='my-input-$rand' class='quantity' name='quantity' min='1' max='5' step='1' value='1' readonly>";
-                        echo "<button id='increment-$rand' class='quantity-btn increment' type='button' onclick='stepper(this, $rand)'> + </button>";
+                        echo "<button id='increment' class='quantity-btn increment' type='button' onclick='stepper(this, $rand)'> + </button>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
