@@ -31,6 +31,8 @@
 
                 $result = mysqli_query($connection, $sql);
 
+                $rand = rand();
+
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
@@ -42,8 +44,8 @@
                         echo "<h3>Ksh " . $row['product_price'] . "</h3>";
                         echo "<div class='quantity-box'>";
                         echo "<button id='decrement' class='quantity-btn decrement' type='button' onclick='stepper(this)'> - </button>";
-                        echo "<input type='number' id='my-input' class='quantity' name='quantity' min='1' max='5' step='1' value='1' readonly>";
-                        echo "<button id='increment' class='quantity-btn increment' type='button' onclick='stepper(this)'> + </button>";
+                        echo "<input type='number' id='my-input-$rand' class='quantity' name='quantity' min='1' max='5' step='1' value='1' readonly>";
+                        echo "<button id='increment' class='quantity-btn increment' type='button' onclick='stepper(this, rand)'> + </button>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
