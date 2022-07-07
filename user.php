@@ -15,8 +15,8 @@
 </head>
 <body>
     <?php
-    require ("../header.php");
-    require("../php/connect.php");
+    require ("header.php");
+    require("php/connect.php");
 
     $userId = $_SESSION["userid"];
     $sql = "SELECT first_name, last_name, username, profile_picture, phone_no, email FROM users WHERE 'user_id' = '$userId';";
