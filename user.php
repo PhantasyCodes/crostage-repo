@@ -19,7 +19,7 @@
     require("php/connect.php");
 
     $userId = $_SESSION["userid"];
-    $sql = "SELECT first_name, last_name, username, profile_picture, phone_no, email FROM users WHERE 'user_id' = '$userId';";
+    $sql = "SELECT first_name, last_name, username, profile_picture, phone_no, email FROM users WHERE user_id = '$userId';";
     $result = mysqli_query($connection, $sql);
 
     if (mysqli_num_rows($result) > 0) {
