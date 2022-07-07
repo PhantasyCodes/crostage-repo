@@ -1,0 +1,7 @@
+.user-body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 20px 30px;
+}
+

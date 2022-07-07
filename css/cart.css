@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
 
 .subtotal {
     height: 20vh;
-    width: 20vw;
+    width: 30vw;
     border: 1px solid black;
     position: absolute;
     right: 20px;
