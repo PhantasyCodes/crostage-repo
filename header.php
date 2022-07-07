@@ -12,7 +12,7 @@
         <div class="nav-links">
             <?php
                 if (isset($_SESSION["useruid"])) {
-                    echo "<a href='user/user.php' class='signin-link' href='signin.php'>Profile page</a>";
+                    echo "<a href='user.php' class='signin-link'>Profile page</a>";
                     echo "<a href='cart.php'><i class='fa fa-shopping-bag' aria-hidden='true'></i></a>";
                 }
                 else {
