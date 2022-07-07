@@ -3,5 +3,50 @@
     width: 100vw;
     display: flex;
     padding: 20px 30px;
+    margin-top: 200px;
 }
+
+.profile-picture {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.details {
+    width: 30vw;    
+}
+
+.details h1 {
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+.details h2 {
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.details h3 {
+    font-family: Josefin sans;
+    font-weight: 400;
+}
+
+.cart-details {
+    border-left: 1px black solid;
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-details h2 {
+    font-weight: 300;
+}
+
+.cart-details h1 {
+    font-size: 4rem;
+    margin: 20px 0px;
+}
+
 
