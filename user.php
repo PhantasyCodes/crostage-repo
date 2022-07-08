@@ -33,6 +33,7 @@
             echo "<h1>". $row['first_name'] . "</h1>";
             echo "<h2>" . $row['username'] . "</h2>";
             echo "<h3>" . $row['email'] . "</h3>";
+            echo "<h3>" . $row['phone_no'] . "</h3>";
             echo "</div>";
             echo "<div class='cart-details'>";
             echo "<a href='php/logout.php'><button class='shadow-btn user-btn'>LOGOUT</button></a>";
