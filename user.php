@@ -38,6 +38,8 @@
             echo "<h2>You have</h2>";
             echo "<h1>0</h1>";
             echo "<h2>items in your cart</h2>";
+            echo "<a href='php/logout.php'><button class='shadow-btn slider-btn'>LOGOUT</button></a>";
+            echo "<a href='user/edituser.php'><button class='shadow-btn slider-btn'>EDIT</button></a>";
             echo "</div>";
             echo "</div>";
         }
