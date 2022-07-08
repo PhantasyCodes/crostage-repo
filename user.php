@@ -35,9 +35,6 @@
             echo "<h3>" . $row['email'] . "</h3>";
             echo "</div>";
             echo "<div class='cart-details'>";
-            echo "<h2>You have</h2>";
-            echo "<h1>0</h1>";
-            echo "<h2>items in your cart</h2>";
             echo "<a href='php/logout.php'><button class='shadow-btn user-btn'>LOGOUT</button></a>";
             echo "<a href='user/edituser.php'><button class='shadow-btn user-btn'>EDIT</button></a>";
             echo "</div>";
