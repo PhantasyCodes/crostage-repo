@@ -67,8 +67,6 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
         exit();
     }
 
-    // $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-
     mysqli_stmt_bind_param($query, "sssssss", $first_name, $last_name, $username, $filename, $number, $email, $password);
     mysqli_stmt_execute($query);
     mysqli_stmt_close($query);
@@ -77,7 +75,7 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
 }
 
 function editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $filename, $location, $sesh_id) {
-    move_uploaded_file($_FILES['file']['tmp_name'], $location);
+    // move_uploaded_file($_FILES['file']['tmp_name'], $location);
     $sql = "UPDATE users SET first_name = 'davidking', last_name = case when $last_name is null then last_name else $last_name, username = case when $username is null then username else $username, number = case when $number is null then number else $number, email = case when $email is null then email else $email, password = case when $password is null then password else $password, profile_picture =  case when $filename is null then profile_picture else $filename WHERE user_id = '3'";
     mysqli_query($connection, $sql);
     header("location: ../user.php?error=none");
