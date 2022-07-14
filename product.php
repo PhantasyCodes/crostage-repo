@@ -16,8 +16,31 @@
 <body>
     <?php
     require ("header.php");
+    require("php/connect.php");
+
+    $id = $_GET['prodId'];
+
+    $sql = "SELECT product_id, product_img, product_name, product_type, product_price, product_description FROM products WHERE product_id = $id";
+
+    $result = mysqli_query($connection, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "<div class='slider product'>";
+            echo "<div class='slider-description'>";
+            echo "<h2>Hoodies</h2>";
+            echo "<h1>" .$row['product_name'] . "</h1>";
+            echo "<h3>Ksh ". $row['product_price']."</h3>";
+            echo "<p>" . $row['product_description'] . "</p>";
+        }
+    } else {
+        echo "0 results";
+    }
+
+    mysqli_close($conn);
     ?>
-    <div class="slider product">
+    <!-- <div class="slider product">
         <div class="slider-description">
             <h2>HOODIES</h2>
             <h1>Hunger Games</h1>
@@ -28,6 +51,6 @@
         <div class="slider-image">
             <img src="images/hunger-games.png" alt="">
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
