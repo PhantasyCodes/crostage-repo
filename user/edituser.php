@@ -29,6 +29,7 @@
                 <?php
                 $id = $_SESSION["useruid"]; 
                 echo "<input type='hidden' name='id' value='$id'>";
+                echo "<h1>" . $id . "</h1>";
                 ?>
                 <input type="hidden" name="id" value="">
                 <div class="drop-box drop-box2">
