@@ -77,9 +77,9 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
 function editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $sesh_id) {
     // move_uploaded_file($_FILES['file']['tmp_name'], $location);
     // $sql = "UPDATE users SET first_name = 'davidking'";
-    $sql = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', username = '$username', number = '$number', email = '$email', password = '$password' WHERE user_id = '3'";
+    $sql = "UPDATE users SET first_name = $first_name, last_name = $last_name, username = $username, number = $number, email = $email, password = $password WHERE user_id = '3'";
     mysqli_query($connection, $sql);
-    header("location: ../user.php?error=none");
+    header("location: ../user.php");
     exit();
 }
 
