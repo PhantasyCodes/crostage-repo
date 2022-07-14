@@ -27,9 +27,8 @@
                 <input class="inputs" type="text" placeholder="New Email Address" name="email">
                 <input class="inputs" type="password" placeholder="New Password" name="password">
                 <?php
-                $id = $_SESSION["useruid"]; 
+                $id = $_SESSION["userid"]; 
                 echo "<input type='hidden' name='id' value='$id'>";
-                echo "<h1>" . $id . "</h1>";
                 ?>
                 <input type="hidden" name="id" value="">
                 <div class="drop-box drop-box2">
