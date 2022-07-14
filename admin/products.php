@@ -38,15 +38,17 @@
                     <?php
                     require("../php/connect.php");
 
-                    $sql = "SELECT product_img, product_id, product_name, product_price FROM products";
+                    $sql = "SELECT product_img, product_id, product_name, product_price, is_active FROM products";
 
                     $result = mysqli_query($connection, $sql);
 
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            $id = $row['product_id'];
-                            echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke/admin/product_edit.php?id=$id'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>Ksh " . $row["product_price"] . "</td><td><form action='../php/product_delete.php' method='post' enctype='multipart/form-data'><input type='hidden' name='prodid' value='".$id."'><button action='submit' class='shadow-btn'>DELETE</button></input></form></td></tr>";
+                            if($row['is_active'] == 'yes'){
+                                $id = $row['product_id'];
+                                echo "<tr class='clickable-row' data-href='http://www.crostage.co.ke/admin/product_edit.php?id=$id'><td><img class='admin-img' src='../images/" . $row['product_img'] . "'></td><td>" . $row["product_id"] . "</td><td>" . $row["product_name"] . "</td><td>Ksh " . $row["product_price"] . "</td><td><form action='../php/product_delete.php' method='post' enctype='multipart/form-data'><input type='hidden' name='prodid' value='".$id."'><button action='submit' class='shadow-btn'>DELETE</button></input></form></td></tr>";
+                            }
                         }
                     } else {
                         echo "0 results";
