@@ -33,7 +33,7 @@
             echo "<h1>" .$row['product_name'] . "</h1>";
             echo "<h3>Ksh ". $row['product_price']."</h3>";
             echo "<p>" . $row['product_description'] . "</p>";
-            echo "<a href='shop.php'><button class='shadow-btn slider-btn'>SHOP NOW</button></a>";
+            echo "<a href='shop.php'><button class='shadow-btn slider-btn'>BUY NOW</button></a>";
             echo "</div>";
             echo "<div class='slider-image'>";
             echo "<img src='images/" . $row['product_img'] . "' alt=''>";
@@ -46,17 +46,5 @@
 
     mysqli_close($conn);
     ?>
-    <!-- <div class="slider product">
-        <div class="slider-description">
-            <h2>HOODIES</h2>
-            <h1>Hunger Games</h1>
-            <h3>Ksh 1000</h3>
-            <p>Product description is what describes what the product really is. Like dont you get I'm just filling space by now?</p>
-            <a href="shop.php"><button class="shadow-btn slider-btn">SHOP NOW</button></a>
-        </div>
-        <div class="slider-image">
-            <img src="images/hunger-games.png" alt="">
-        </div>
-    </div> -->
 </body>
 </html>
