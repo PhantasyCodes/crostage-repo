@@ -9,11 +9,10 @@ if (isset($_POST["submit"])) {
     $password = $_POST["password"];
     $sesh_id = $_POST["id"];
 
-    echo $first_name;
-
     // require_once 'functions.php';
 
     // editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $sesh_id);
+    echo $sesh_id;
 }
 
 else {
