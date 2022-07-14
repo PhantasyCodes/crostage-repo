@@ -76,7 +76,7 @@
                         echo "<h2 style='font-weight:300;'>" . $row["product_price"] . "</h2>";
                         echo "</div>";
                         echo "<div class='shop-item-child-right'>";
-                        echo "<button class='shadow-btn'>VIEW</button>";
+                        echo "<a href='product.php?prodId=". $row['product_id'] ."'><button class='shadow-btn'>VIEW</button></a>";
                         echo "<form method='post'>";
                         echo "<button action='submit' class='shadow-btn' name='button' value='" . $id . "'>ADD TO CART</button>";
                         echo "</form>";
