@@ -33,6 +33,12 @@
             echo "<h1>" .$row['product_name'] . "</h1>";
             echo "<h3>Ksh ". $row['product_price']."</h3>";
             echo "<p>" . $row['product_description'] . "</p>";
+            echo "<a href='shop.php'><button class='shadow-btn slider-btn'>SHOP NOW</button></a>";
+            echo "</div>";
+            echo "<div class='slider-image'>";
+            echo "<img src='images/" . $row['product_img'] . "' alt=''>";
+            echo "</div>";
+            echo "</div>";
         }
     } else {
         echo "0 results";
