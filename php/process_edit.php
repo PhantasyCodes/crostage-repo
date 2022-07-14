@@ -18,16 +18,6 @@ if (isset($_POST["submit"])) {
 
     require_once 'functions.php';
 
-    if(invalidUid($username) !== false) {
-        header("location: ../register.php?error=invaliduid");
-        exit();
-    }
-
-    if(invalidEmail($email) !== false) {
-        header("location: ../register.php?error=invalidemail");
-        exit();
-    }
-
     if(takenUid($connection, $username, $email) !== false) {
         header("location: ../register.php?error=takenuid");
         exit();
