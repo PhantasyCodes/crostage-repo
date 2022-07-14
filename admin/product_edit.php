@@ -31,6 +31,7 @@
                 $result = mysqli_query($connection, $sql);
                 $row = mysqli_fetch_assoc($result);
                 mysqli_close($conn);
+                echo "<h1>" . $row['product_description']."</h2>";
                 ?>
                 <form id="form2" class="product-form" action="../php/product_update.php" method="post" enctype="multipart/form-data">
                     <?php echo "<input type='hidden' name='id' value='$prod_id'>";?>
