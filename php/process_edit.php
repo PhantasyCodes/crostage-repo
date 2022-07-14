@@ -12,11 +12,6 @@ if (isset($_POST["submit"])) {
 
     require_once 'functions.php';
 
-    if(takenUid($connection, $username, $email) !== false) {
-        header("location: ../register.php?error=takenuid");
-        exit();
-    }
-
     editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $sesh_id);
 }
 
