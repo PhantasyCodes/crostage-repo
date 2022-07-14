@@ -59,6 +59,7 @@
         </form>
         <div class="subtotal">
             <h2>Subtotal: <?php echo $subTotal;?></h2>
+            <button class='shadow-btn user-btn'>CHECKOUT</button>
         </div>
     </div>
     <script src="js/cart.js"></script>
