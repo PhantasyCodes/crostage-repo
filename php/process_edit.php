@@ -3,9 +3,6 @@
 if (isset($_POST["submit"])) {
     require("connect.php");
 
-    // print_r($_POST);
-
-
     $first_name = $_POST["firstname"];
     $last_name = $_POST["lastname"];
     $username = $_POST["username"];

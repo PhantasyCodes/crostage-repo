@@ -78,7 +78,7 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
 
 function editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $filename, $location, $sesh_id) {
     move_uploaded_file($_FILES['file']['tmp_name'], $location);
-    $sql = "UPDATE users SET first_name = IFNULL(NULL, 'first_name') '$first_name', last_name = IFNULL(NULL, 'last_name') '$last_name', username = IFNULL(NULL, 'username') '$username', number = IFNULL(NULL, 'number') '$number', email = IFNULL(NULL, 'email')'$email', password = IFNULL(NULL, 'password') '$password', profile_picture = IFNULL(NULL, 'profile_picture') '$filename' WHERE user_id = '$sesh_id'";
+    $sql = "UPDATE users SET first_name = case when $first_name is null then first_name else $first_name, last_name = case when $last_name is null then last_name else $last_name, username = case when $username is null then username else $username, number = case when $number is null then number else $number, email = case when $email is null then email else $email, password = case when $password is null then password else $password, profile_picture =  case when $filename is null then profile_picture else $filename WHERE user_id = $sesh_id";
     mysqli_query($connection, $sql);
     header("location: ../user.php?error=none");
     exit();
