@@ -31,7 +31,7 @@
                 mysqli_close($conn);
                 echo "<input type='hidden' name='id' value='$id'>";
                 ?>
-                <input class="inputs" type="text" placeholder="New First Name" name="firstname" value="Nice">
+                <input class="inputs" type="text" placeholder="New First Name" name="firstname" value="<?php echo $row['first_name'];?>">
                 <input class="inputs" type="text" placeholder="New Last Name" name="lastname" value="<?php echo $row['last_name'];?>">
                 <input class="inputs" type="text" placeholder="New Username" name="username" value="<?php echo $row['username'];?>">
                 <input class="inputs" type="text" placeholder="New Phone No" name="number" value="<?php echo $row['phone_no'];?>">
