@@ -16,42 +16,30 @@
             <div class="side-panel-links">
                 <a href=""><button class="big-btn side-btns">Dashboard</button></a>
                 <a href="products.php"><button class="big-btn side-btns btn-active">Products</button></a>
-                    <a href="product_register.php"><button class="side-btns sub-button">Add New</button></a>
                 <a href="categories.php"><button class="big-btn side-btns">Categories</button></a>
                 <a href=""><button class="big-btn side-btns">Sign Out</button></a>
             </div>
         </div>
         <div class="product-content">
             <div class="product-form-wrapper">
-                <h1>Add New Product:</h1>
-                <form id="form2" class="product-form" action="../php/product_push.php" method="post" enctype="multipart/form-data">
-                    <input type="text" name="pname" placeholder="Product Name">
-                    <input type="text" name="price" placeholder="Product Price">
-                    <input type="text" name="stock" placeholder="No in stock">
-                    <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description"></textarea>
-                    <select name="category" id="">
-                    <?php
-                    require("../php/connect.php");
+                <h1>Edit Product:</h1>
 
-                    $category_sql = "SELECT category_id, category_name FROM categories;";
-                    $category_table = mysqli_query($connection, $category_sql);
-
-                    for($i = 0; $i < mysqli_num_rows($category_table); $i++){
-                        $row = mysqli_fetch_array($category_table, MYSQLI_ASSOC);
-                        $option_value = $row['category_id'];
-                        $option_name = $row['category_name'];
-                        echo "<option value='$option_value'>$option_name</option>";
-                    }
-                    ?>
-                    </select>
-                    <div class="drop-box">
-                        <h2 class="drop-box-prompt">DRAG OR CLICK TO UPLOAD PRODUCT IMAGE</h2>
-                        <input class="drop-zone-input" name="file" type="file">
-                    </div>
-                    
+                <?php
+                require ("../php/connect.php");
+                $prod_id = $_GET['id'];
+                $sql = "SELECT product_name, product_price, product_description, stock, product_description FROM products WHERE product_id = $prod_id";
+                $result = mysqli_query($connection, $sql);
+                $row = mysqli_fetch_assoc($result);
+                mysqli_close($conn);
+                ?>
+                <form id="form2" class="product-form" action="../php/product_update.php" method="post" enctype="multipart/form-data">
+                    <?php echo "<input type='hidden' name='id' value='$prod_id'>";?>
+                    <input type="text" name="pname" placeholder="Product Name" value="<?php echo $row['product_name'];?>">
+                    <input type="text" name="price" placeholder="Product Price" value="<?php echo $row['product_price'];?>">
+                    <input type="text" name="stock" placeholder="No in stock" value="<?php echo $row['stock'];?>">
+                    <textarea name="pdescription" id="" cols="30" rows="10" placeholder="Product description" value="<?php echo $row['product_description'];?>"></textarea>        
                 </form>
-
-                <a href=""><button action="submit" form="form2" class="shadow-btn">DONE</button></a>
+                <a href=""><button action="submit" form="form2" class="shadow-btn">EDIT</button></a>
             </div>
         </div>
     </div>
