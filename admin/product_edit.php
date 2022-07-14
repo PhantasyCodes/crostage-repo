@@ -38,7 +38,7 @@
                     <input type="text" name="pname" placeholder="Product Name" value="<?php echo $row['product_name'];?>">
                     <input type="text" name="price" placeholder="Product Price" value="<?php echo $row['product_price'];?>">
                     <input type="text" name="stock" placeholder="No in stock" value="<?php echo $row['stock'];?>">
-                    <input name="pdescription" id="" cols="30" rows="10" placeholder="Product description" value="<?php echo $row['product_description'];?>">       
+                    <input type="text" name="pdescription" placeholder="Product description" value="<?php echo $row['product_description'];?>">       
                 </form>
                 <a href=""><button action="submit" form="form2" class="shadow-btn">EDIT</button></a>
             </div>
