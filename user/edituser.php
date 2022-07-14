@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php
-    require ("header.php");
+    require ("../header.php");
     ?>
     <div class="hero register-hero">
         <div class="sign-in-right register-wrapper">
