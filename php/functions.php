@@ -77,7 +77,7 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
 function editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $sesh_id) {
     $sql = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', username = '$username', phone_no = '$number', email = '$email', password = '$password' WHERE users.user_id = '3'";
     mysqli_query($connection, $sql);
-    header("location: ../user.php?name=$first_name");
+    header("location: ../user.php");
     exit();
 }
 

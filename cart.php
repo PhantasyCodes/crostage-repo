@@ -31,12 +31,12 @@
 
                 $result = mysqli_query($connection, $sql);
 
-
+                $subTotal = 0;
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                         $rand = rand();
-
+                        $subTotal = $subTotal + $row['product_price'];
                         $productImage = $row['product_img'];
                         echo "<div class='cart-item'>";
                         echo "<img src='images/" . $row['product_img'] . "'>";
@@ -58,7 +58,7 @@
             ?>
         </form>
         <div class="subtotal">
-            
+            <h2>Subtotal: <?php echo $subTotal;?></h2>
         </div>
     </div>
     <script src="js/cart.js"></script>
