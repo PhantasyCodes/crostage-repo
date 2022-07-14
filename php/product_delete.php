@@ -9,3 +9,5 @@ $sql = "UPDATE products SET is_active = 'no' WHERE product_id = '$product_id';";
 
 mysqli_query($connection, $sql);
 mysqli_close($connection);
+
+header("../admin/products/php");
