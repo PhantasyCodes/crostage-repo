@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST["submit"])) {
+    require("connect.php");
     $first_name = $_POST["firstname"];
     $last_name = $_POST["lastname"];
     $username = $_POST["username"];
@@ -9,10 +10,9 @@ if (isset($_POST["submit"])) {
     $password = $_POST["password"];
     $sesh_id = $_POST["id"];
 
-    // require_once 'functions.php';
+    require 'functions.php';
 
-    // editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $sesh_id);
-    echo $sesh_id;
+    editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $sesh_id);
 }
 
 else {
