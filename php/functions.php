@@ -1,7 +1,7 @@
 <?php
 
 function emptyInputSignup($first_name, $last_name, $username, $number, $email, $password) {
-    $result;
+    $result = null;
     if (empty($first_name) || empty($last_name) || empty($username) || empty($number) || empty($email) || empty($password)) {
         $result = true;
     }
@@ -12,7 +12,7 @@ function emptyInputSignup($first_name, $last_name, $username, $number, $email, $
 }
 
 function invalidUid($username) {
-    $result;
+    $result = null;
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         $result = true;
     }
@@ -23,7 +23,7 @@ function invalidUid($username) {
 }
 
 function invalidEmail($email) {
-    $result;
+    $result = null;
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
     }
@@ -76,8 +76,16 @@ function createUser($connection, $first_name, $last_name, $username, $number, $e
     exit();
 }
 
+function editUser($connection, $first_name, $last_name, $username, $number, $email, $password, $filename, $location, $sesh_id) {
+    move_uploaded_file($_FILES['file']['tmp_name'], $location);
+    $sql = "UPDATE users SET first_name = IFNULL(NULL, 'first_name') '$first_name', last_name = IFNULL(NULL, 'last_name') '$last_name', username = IFNULL(NULL, 'username') '$username', number = IFNULL(NULL, 'number') '$number', email = IFNULL(NULL, 'email')'$email', password = IFNULL(NULL, 'password') '$password', profile_picture = IFNULL(NULL, 'profile_picture') '$filename' WHERE user_id = '$sesh_id'";
+    mysqli_query($connection, $sql);
+    header("location: ../user.php?error=none");
+    exit();
+}
+
 function emptyInputSignin($username, $pwd) {
-    $result;
+    $result = null;
     if (empty($username) || empty($pwd)) {
         $result = true;
     }

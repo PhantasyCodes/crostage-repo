@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +33,18 @@
     <div class="hero register-hero">
         <div class="sign-in-right register-wrapper">
             <h2>Edit your Account</h2>
-            <form id="form1" class="forms" action="php/process_register.php" method="post" enctype="multipart/form-data">
+            <form id="form1" class="forms" action="php/process_edit.php" method="post" enctype="multipart/form-data">
                 <input class="inputs" type="text" placeholder="New First Name" name="firstname">
                 <input class="inputs" type="text" placeholder="New Last Name" name="lastname">
                 <input class="inputs" type="text" placeholder="New Username" name="username">
                 <input class="inputs" type="text" placeholder="New Phone No" name="number">
                 <input class="inputs" type="text" placeholder="New Email Address" name="email">
                 <input class="inputs" type="password" placeholder="New Password" name="password">
+                <?php
+                $id = $_SESSION["useruid"]; 
+                echo "<input type='hidden' name='id' value='$id'>";
+                ?>
+                <input type="hidden" name="id" value="">
                 <div class="drop-box drop-box2">
                     <h2 class="drop-box-prompt">New profile picture</h2>
                     <input style="display:none" class="drop-zone-input" name="file" type="file">
